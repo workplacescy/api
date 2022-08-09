@@ -1,0 +1,261 @@
+openapi: 3.1.0
+info:
+  title: 'Workplaces in Cyprus API'
+  version: 1.0.0
+paths:
+  /:
+    get:
+      summary: 'List places'
+      parameters:
+        -
+          $ref: '#/components/parameters/busyness'
+        -
+          $ref: '#/components/parameters/city'
+        -
+          $ref: '#/components/parameters/location'
+        -
+          $ref: '#/components/parameters/size'
+        -
+          $ref: '#/components/parameters/sockets'
+        -
+          $ref: '#/components/parameters/type'
+        -
+          $ref: '#/components/parameters/view'
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaceCollectionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequestError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+        '500':
+          $ref: '#/components/responses/ServerError'
+  /nearest:
+    get:
+      summary: 'Lookup nearest place'
+      parameters:
+        -
+          $ref: '#/components/parameters/latitude'
+        -
+          $ref: '#/components/parameters/longitude'
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaceResourceResponse'
+        '400':
+          $ref: '#/components/responses/BadRequestError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+        '500':
+          $ref: '#/components/responses/ServerError'
+  /random:
+    get:
+      summary: 'Get random place'
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaceResourceResponse'
+        '400':
+          $ref: '#/components/responses/BadRequestError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+        '500':
+          $ref: '#/components/responses/ServerError'
+  /search:
+    get:
+      summary: 'Search places'
+      parameters:
+        -
+          $ref: '#/components/parameters/q'
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaceCollectionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequestError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+        '500':
+          $ref: '#/components/responses/ServerError'
+  '/{place}':
+    get:
+      summary: 'Show place'
+      parameters:
+        -
+          name: place
+          in: path
+          required: true
+          allowEmptyValue: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          $ref: '#/components/responses/PlaceResourceResponse'
+        '400':
+          $ref: '#/components/responses/BadRequestError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+        '500':
+          $ref: '#/components/responses/ServerError'
+components:
+  schemas:
+    PlaceCollection:
+      required:
+        - type
+        - features
+      properties:
+        type:
+          type: string
+          enum:
+            - FeatureCollection
+        features:
+          type: array
+          items:
+            $ref: '#/components/schemas/PlaceResource'
+      type: object
+    PlaceResource:
+      required:
+        - id
+        - type
+        - properties
+      properties:
+        id:
+          type: integer
+        type:
+          type: string
+          enum:
+            - Feature
+        properties:
+          required:
+            - name
+            - description
+            - type
+            - placeId
+            - city
+            - sockets
+            - size
+            - location
+            - busyness
+            - view
+            - rank
+          properties:
+            name:
+              type: string
+            description:
+              type: string
+            type:
+              type: string
+            placeId:
+              type: string
+            city:
+              type: string
+            sockets:
+              type: string
+            size:
+              type: string
+            location:
+              type: string
+            busyness:
+              type: string
+            view:
+              type: string
+            rank:
+              type: integer
+          type: object
+        geometry:
+          required:
+            - type
+            - coordinates
+          properties:
+            type:
+              type: string
+              enum:
+                - Point
+            coordinates:
+              type: array
+              items:
+                type: number
+                format: float
+          type: object
+      type: object
+  responses:
+    PlaceCollectionResponse:
+      description: 'Place Collection'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PlaceCollection'
+    PlaceResourceResponse:
+      description: 'Single Place'
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PlaceResource'
+    BadRequestError:
+      description: 'Bad Request'
+    NotFoundError:
+      description: 'Resource Not Found'
+    ServerError:
+      description: 'Server error'
+  parameters:
+    busyness:
+      name: busyness
+      in: query
+      schema:
+        type: string
+    city:
+      name: city
+      in: query
+      schema:
+        type: string
+    location:
+      name: location
+      in: query
+      schema:
+        type: string
+    size:
+      name: size
+      in: query
+      schema:
+        type: string
+    sockets:
+      name: sockets
+      in: query
+      schema:
+        type: string
+    type:
+      name: type
+      in: query
+      schema:
+        type: string
+    view:
+      name: view
+      in: query
+      schema:
+        type: string
+    latitude:
+      name: latitude
+      in: query
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: string
+        format: float
+        maximum: 90
+        minimum: -90
+    longitude:
+      name: longitude
+      in: query
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: string
+        format: float
+        maximum: 180
+        minimum: -180
+    q:
+      name: q
+      in: query
+      required: true
+      allowEmptyValue: false
+      schema:
+        type: string
+        maxLength: 255
+        minLength: 3
