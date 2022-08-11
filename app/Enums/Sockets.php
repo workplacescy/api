@@ -10,6 +10,7 @@ use function array_map;
 
 enum Sockets: string implements PropertyEnum
 {
+    case None = 'None';
     case Few = 'Few';
     case Many = 'Many';
 
@@ -27,8 +28,9 @@ enum Sockets: string implements PropertyEnum
     public function coefficient(): int
     {
         return match ($this) {
-            self::Few => 1,
-            self::Many => 3,
+            self::None => 1,
+            self::Few => 3,
+            self::Many => 5,
         };
     }
 }

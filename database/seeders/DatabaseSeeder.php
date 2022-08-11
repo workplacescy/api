@@ -153,19 +153,49 @@ final class DatabaseSeeder extends Seeder
             'view' => View::Street->value,
         ]);
 
-        //Place::create([
-        //    'name' => '',
-        //    'description' => '',
-        //    'type' => Type::Cafe->value,
-        //    'place_id' => '',
-        //    'city' => City::Nicosia->value,
-        //    'latitude' => '',
-        //    'longitude' => '',
-        //    'sockets' => Sockets::Many->value,
-        //    'size' => Size::Big->value,
-        //    'location' => Location::Convenient->value,
-        //    'busyness' => Busyness::Average->value,
-        //    'view' => View::Street->value,
-        //]);
+        Place::create([
+            'name' => 'Dear all',
+            'description' => 'Small coffee shop with good food and without sockets',
+            'type' => Type::Cafe->value,
+            'place_id' => 'ChIJf5tk_vUz5xQRzYevtGMIBOQ',
+            'city' => City::Limassol->value,
+            'latitude' => '34.6813345',
+            'longitude' => '33.0488308',
+            'sockets' => Sockets::None->value,
+            'size' => Size::Small->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'The Shopkeeper & Co',
+            'description' => 'Bizarre busy store and coffee bar',
+            'type' => Type::Cafe->value,
+            'place_id' => 'ChIJEY-Nnxwz5xQRptn4sJVrQW0',
+            'city' => City::Limassol->value,
+            'latitude' => '34.6811769',
+            'longitude' => '33.0454476',
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Stories',
+            'description' => 'Tiny coffee shop with ordinary coffee, croissants and without sockets',
+            'type' => Type::Cafe->value,
+            'place_id' => 'ChIJP8Rf_zQz5xQRxBnVANt1Nvk',
+            'city' => City::Limassol->value,
+            'latitude' => '34.67825680000001',
+            'longitude' => '33.0446193',
+            'sockets' => Sockets::None->value,
+            'size' => Size::Small->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
     }
 }
