@@ -1,1 +1,1 @@
-API microservice of Work Places in Cyprus for https://workplaces.cy 
+API microservice of Workplaces in Cyprus for https://workplaces.cy 

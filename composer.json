@@ -1,7 +1,7 @@
 {
     "name": "workplacescy/api",
     "type": "project",
-    "description": "REST API microservice of Work Places in Cyprus website",
+    "description": "REST API microservice of Workplaces in Cyprus website",
     "keywords": [
         "REST",
         "API",
