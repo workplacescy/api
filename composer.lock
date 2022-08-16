@@ -4,20 +4,146 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ad40f8c504d0e5a07217f203f2695b7",
+    "content-hash": "1cd22a3c87438afc2d35d4b77088b7aa",
     "packages": [
         {
-            "name": "brick/math",
-            "version": "0.10.1",
+            "name": "alexpechkarev/geometry-library",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/brick/math.git",
-                "reference": "de846578401f4e58f911b3afeb62ced56365ed87"
+                "url": "https://github.com/alexpechkarev/geometry-library.git",
+                "reference": "71e40bd2ecdc86d3d985422b0c32d5f0d91a5612"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/de846578401f4e58f911b3afeb62ced56365ed87",
-                "reference": "de846578401f4e58f911b3afeb62ced56365ed87",
+                "url": "https://api.github.com/repos/alexpechkarev/geometry-library/zipball/71e40bd2ecdc86d3d985422b0c32d5f0d91a5612",
+                "reference": "71e40bd2ecdc86d3d985422b0c32d5f0d91a5612",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GeometryLibrary\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Pechkarev",
+                    "email": "alexpechkarev@gmail.com"
+                }
+            ],
+            "description": "PHP Geometry library provides utility functions for the computation of geometric data on the surface of the Earth.",
+            "homepage": "https://alexpechkarev.github.io/geometry-library/",
+            "keywords": [
+                "computations polygons and polylines",
+                "encoding and decoding polyline paths utilities",
+                "google maps geometry library",
+                "php geometry library",
+                "spherical geometry utilities"
+            ],
+            "support": {
+                "issues": "https://github.com/alexpechkarev/geometry-library/issues",
+                "source": "https://github.com/alexpechkarev/geometry-library/tree/1.0.4"
+            },
+            "time": "2021-10-18T15:15:05+00:00"
+        },
+        {
+            "name": "alexpechkarev/google-maps",
+            "version": "9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alexpechkarev/google-maps.git",
+                "reference": "861dcf84153ec2181fd8205d2eeaa106de87e741"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alexpechkarev/google-maps/zipball/861dcf84153ec2181fd8205d2eeaa106de87e741",
+                "reference": "861dcf84153ec2181fd8205d2eeaa106de87e741",
+                "shasum": ""
+            },
+            "require": {
+                "alexpechkarev/geometry-library": "^1.0.2",
+                "ext-curl": "*",
+                "ext-json": "*",
+                "illuminate/config": "^8.0 | ^9.0",
+                "illuminate/support": "^8.0 | ^9.0",
+                "jbroadway/urlify": "^1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "GoogleMaps\\ServiceProvider\\GoogleMapsServiceProvider"
+                    ],
+                    "aliases": {
+                        "GoogleMaps": "GoogleMaps\\Facade\\GoogleMapsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GoogleMaps\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Pechkarev",
+                    "email": "alexpechkarev@gmail.com"
+                }
+            ],
+            "description": "Collection of Google Maps API Web Services for Laravel",
+            "homepage": "https://alexpechkarev.github.io/google-maps/",
+            "keywords": [
+                "Google Maps API",
+                "directions api",
+                "distance matrix api",
+                "elevation api",
+                "geocoding api",
+                "geolocation api",
+                "google maps api for laravel",
+                "google maps web service for laravel",
+                "laravel google maps api",
+                "places api web service",
+                "roads api",
+                "time zone api"
+            ],
+            "support": {
+                "issues": "https://github.com/alexpechkarev/google-maps/issues",
+                "source": "https://github.com/alexpechkarev/google-maps/tree/9.0"
+            },
+            "time": "2022-02-13T11:44:27+00:00"
+        },
+        {
+            "name": "brick/math",
+            "version": "0.10.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brick/math.git",
+                "reference": "459f2781e1a08d52ee56b0b1444086e038561e3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brick/math/zipball/459f2781e1a08d52ee56b0b1444086e038561e3f",
+                "reference": "459f2781e1a08d52ee56b0b1444086e038561e3f",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +178,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.10.1"
+                "source": "https://github.com/brick/math/tree/0.10.2"
             },
             "funding": [
                 {
@@ -60,7 +186,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-08-01T22:54:31+00:00"
+            "time": "2022-08-10T22:54:19+00:00"
         },
         {
             "name": "clue/stream-filter",
@@ -610,6 +736,77 @@
             "time": "2021-07-21T13:50:14+00:00"
         },
         {
+            "name": "jbroadway/urlify",
+            "version": "1.2.4-stable",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jbroadway/urlify.git",
+                "reference": "d0fafbaa1dc14e8039cdf5c72a932a8d1de1750e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/d0fafbaa1dc14e8039cdf5c72a932a8d1de1750e",
+                "reference": "d0fafbaa1dc14e8039cdf5c72a932a8d1de1750e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "voku/portable-ascii": "^2.0",
+                "voku/stop-words": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "URLify": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause-Clear"
+            ],
+            "authors": [
+                {
+                    "name": "Johnny Broadway",
+                    "email": "johnny@johnnybroadway.com",
+                    "homepage": "http://www.johnnybroadway.com/"
+                }
+            ],
+            "description": "A fast PHP slug generator and transliteration library that converts non-ascii characters for use in URLs.",
+            "homepage": "https://github.com/jbroadway/urlify",
+            "keywords": [
+                "ascii",
+                "blogging",
+                "blogs",
+                "downcode",
+                "encode",
+                "iconv",
+                "link",
+                "seo",
+                "slug",
+                "slugify",
+                "slugs",
+                "translit",
+                "transliterate",
+                "transliteration",
+                "unicode",
+                "url",
+                "urlify"
+            ],
+            "support": {
+                "issues": "https://github.com/jbroadway/urlify/issues",
+                "source": "https://github.com/jbroadway/urlify/tree/1.2.4-stable"
+            },
+            "time": "2022-06-15T16:46:46+00:00"
+        },
+        {
             "name": "jean85/pretty-package-versions",
             "version": "2.0.5",
             "source": {
@@ -670,16 +867,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.24.0",
+            "version": "v9.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "053840f579cf01d353d81333802afced79b1c0af"
+                "reference": "e8af8c2212e3717757ea7f459a655a2e9e771109"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/053840f579cf01d353d81333802afced79b1c0af",
-                "reference": "053840f579cf01d353d81333802afced79b1c0af",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/e8af8c2212e3717757ea7f459a655a2e9e771109",
+                "reference": "e8af8c2212e3717757ea7f459a655a2e9e771109",
                 "shasum": ""
             },
             "require": {
@@ -846,7 +1043,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-08-09T13:43:22+00:00"
+            "time": "2022-08-16T16:36:05+00:00"
         },
         {
             "name": "laravel/scout",
@@ -4559,6 +4756,53 @@
                 }
             ],
             "time": "2022-03-08T17:03:00+00:00"
+        },
+        {
+            "name": "voku/stop-words",
+            "version": "2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voku/stop-words.git",
+                "reference": "8e63c0af20f800b1600783764e0ce19e53969f71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voku/stop-words/zipball/8e63c0af20f800b1600783764e0ce19e53969f71",
+                "reference": "8e63c0af20f800b1600783764e0ce19e53969f71",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "voku\\": "src/voku/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Moelleken",
+                    "homepage": "http://www.moelleken.org/"
+                }
+            ],
+            "description": "Stop-Words via PHP",
+            "keywords": [
+                "stop words",
+                "stop-words"
+            ],
+            "support": {
+                "issues": "https://github.com/voku/stop-words/issues",
+                "source": "https://github.com/voku/stop-words/tree/master"
+            },
+            "time": "2018-11-23T01:37:27+00:00"
         }
     ],
     "packages-dev": [
