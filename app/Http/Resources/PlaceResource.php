@@ -46,8 +46,8 @@ final class PlaceResource extends JsonResource
             'placeId' => $this->place_id,
             'address' => $this->address,
             'position' => [
-                'lat' => (float)$this->longitude,
-                'lng' => (float)$this->latitude,
+                'lat' => (float)$this->latitude,
+                'lng' => (float)$this->longitude,
             ],
             'url' => $this->url,
             'sockets' => $this->sockets,
