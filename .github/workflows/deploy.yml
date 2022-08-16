@@ -35,5 +35,7 @@ jobs:
       - uses: superfly/flyctl-actions/setup-flyctl@master
 
       - run: flyctl deploy
+        with:
+          build-arg: ${{ secrets.MAP_API_KEY }}
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
