@@ -25,10 +25,12 @@ return new class extends Migration
             $table->text('description')->index()->nullable();
             //$table->text('description')->fulltext()->nullable();
             $table->enum('type', Type::values())->index();
-            $table->string('place_id');
             $table->enum('city', City::values())->index();
+            $table->string('place_id');
+            $table->string('address');
             $table->string('latitude', 20)->index();
             $table->string('longitude', 20)->index();
+            $table->string('url');
             $table->enum('sockets', Sockets::values())->index();
             $table->enum('size', Size::values())->index();
             $table->enum('location', Location::values())->index();
