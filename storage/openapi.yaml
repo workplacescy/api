@@ -97,83 +97,67 @@ paths:
 components:
   schemas:
     PlaceCollection:
-      required:
-        - type
-        - features
-      properties:
-        type:
-          type: string
-          enum:
-            - FeatureCollection
-        features:
-          type: array
-          items:
-            $ref: '#/components/schemas/PlaceResource'
-      type: object
+      type: array
+      items:
+        $ref: '#/components/schemas/PlaceResource'
     PlaceResource:
       required:
         - id
+        - name
+        - description
         - type
-        - properties
+        - city
+        - placeId
+        - address
+        - position
+        - url
+        - sockets
+        - size
+        - location
+        - busyness
+        - view
+        - rank
       properties:
         id:
           type: integer
+        name:
+          type: string
+        description:
+          type: string
         type:
           type: string
-          enum:
-            - Feature
-        properties:
+        city:
+          type: string
+        placeId:
+          type: string
+        address:
+          type: string
+        position:
           required:
-            - name
-            - description
-            - type
-            - placeId
-            - city
-            - sockets
-            - size
-            - location
-            - busyness
-            - view
-            - rank
+            - lat
+            - lng
           properties:
-            name:
-              type: string
-            description:
-              type: string
-            type:
-              type: string
-            placeId:
-              type: string
-            city:
-              type: string
-            sockets:
-              type: string
-            size:
-              type: string
-            location:
-              type: string
-            busyness:
-              type: string
-            view:
-              type: string
-            rank:
-              type: integer
+            lat:
+              type: number
+              format: float
+            lng:
+              type: number
+              format: float
           type: object
-        geometry:
-          required:
-            - type
-            - coordinates
-          properties:
-            type:
-              type: string
-              enum:
-                - Point
-            coordinates:
-              type: array
-              items:
-                type: number
-                format: float
-          type: object
+        url:
+          type: string
+        sockets:
+          type: string
+        size:
+          type: string
+        location:
+          type: string
+        busyness:
+          type: string
+        view:
+          type: string
+        rank:
+          type: integer
       type: object
   responses:
     PlaceCollectionResponse:
@@ -230,6 +214,11 @@ components:
       in: query
       schema:
         type: string
+    rank:
+      name: rank
+      in: query
+      schema:
+        type: integer
     latitude:
       name: latitude
       in: query
