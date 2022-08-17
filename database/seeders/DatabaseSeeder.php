@@ -161,5 +161,39 @@ final class DatabaseSeeder extends Seeder
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
+
+        Place::create([
+            'name' => 'Second Cup',
+            'description' => 'Big coffee shop with coffee, food and the average number of sockets. Located on the harbour',
+            'type' => Type::Cafe->value,
+            'city' => City::AyiaNapa->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee',
+            'type' => Type::Cafe->value,
+            'city' => City::AyiaNapa->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => "Gloria Jean's Coffees",
+            'type' => Type::Cafe->value,
+            'city' => City::AyiaNapa->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
     }
 }

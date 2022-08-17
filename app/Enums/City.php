@@ -10,6 +10,7 @@ use function array_map;
 
 enum City: string implements PropertyEnum
 {
+    case AyiaNapa = 'Ayia Napa';
     case Larnaca = 'Larnaca';
     case Limassol = 'Limassol';
     case Nicosia = 'Nicosia';
