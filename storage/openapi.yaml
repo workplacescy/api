@@ -170,8 +170,9 @@ components:
           type: string
         vRate:
           type:
-            - integer
+            - number
             - 'null'
+          format: float
       type: object
   responses:
     PlaceCollectionResponse:
@@ -196,43 +197,54 @@ components:
     busyness:
       name: busyness
       in: query
+      allowEmptyValue: false
       schema:
         type: string
     city:
       name: city
       in: query
+      allowEmptyValue: false
       schema:
         type: string
     location:
       name: location
       in: query
+      allowEmptyValue: false
       schema:
         type: string
     size:
       name: size
       in: query
+      allowEmptyValue: false
       schema:
         type: string
     sockets:
       name: sockets
       in: query
+      allowEmptyValue: false
       schema:
         type: string
     type:
       name: type
       in: query
+      allowEmptyValue: false
       schema:
         type: string
     view:
       name: view
       in: query
+      allowEmptyValue: false
       schema:
         type: string
     vRate:
       name: vRate
       in: query
+      allowEmptyValue: false
       schema:
-        type: integer
+        type: string
+        format: float
+        maximum: 0
+        minimum: 5
     latitude:
       name: latitude
       in: query
