@@ -17,8 +17,8 @@ use OpenApi\Attributes as OA;
     new OA\Property(property: 'placeId', type: 'string', nullable: true),
     new OA\Property(property: 'address', type: 'string', nullable: true),
     new OA\Property(property: 'position', required: ['lat', 'lng'], properties: [
-        new OA\Property(property: 'lat', type: 'number', format: 'float', nullable: true),
-        new OA\Property(property: 'lng', type: 'number', format: 'float', nullable: true),
+        new OA\Property(property: 'lat', type: 'float', nullable: true),
+        new OA\Property(property: 'lng', type: 'float', nullable: true),
     ], type: 'object'),
     new OA\Property(property: 'url', type: 'string', nullable: true),
     new OA\Property(property: 'sockets', type: 'string'),

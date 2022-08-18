@@ -15,13 +15,13 @@ use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Enum;
 use OpenApi\Attributes as OA;
 
-#[OA\Parameter(name: 'busyness', in: 'query', schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'city', in: 'query', schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'location', in: 'query', schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'size', in: 'query', schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'sockets', in: 'query', schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'type', in: 'query', schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'view', in: 'query', schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'busyness', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'city', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'location', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'size', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'sockets', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'type', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'view', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'vRate', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string', format: 'float', maximum: 0, minimum: 5))]
 final class IndexRequest extends FormRequest
 {
