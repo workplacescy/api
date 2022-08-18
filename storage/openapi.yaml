@@ -116,36 +116,48 @@ components:
         - location
         - busyness
         - view
-        - rank
+        - vRate
       properties:
         id:
           type: integer
         name:
           type: string
         description:
-          type: string
+          type:
+            - string
+            - 'null'
         type:
           type: string
         city:
           type: string
         placeId:
-          type: string
+          type:
+            - string
+            - 'null'
         address:
-          type: string
+          type:
+            - string
+            - 'null'
         position:
           required:
             - lat
             - lng
           properties:
             lat:
-              type: number
+              type:
+                - number
+                - 'null'
               format: float
             lng:
-              type: number
+              type:
+                - number
+                - 'null'
               format: float
           type: object
         url:
-          type: string
+          type:
+            - string
+            - 'null'
         sockets:
           type: string
         size:
@@ -156,8 +168,10 @@ components:
           type: string
         view:
           type: string
-        rank:
-          type: integer
+        vRate:
+          type:
+            - integer
+            - 'null'
       type: object
   responses:
     PlaceCollectionResponse:
@@ -214,8 +228,8 @@ components:
       in: query
       schema:
         type: string
-    rank:
-      name: rank
+    vRate:
+      name: vRate
       in: query
       schema:
         type: integer

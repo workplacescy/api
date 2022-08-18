@@ -9,13 +9,13 @@ use App\Models\Place;
 
 use function array_reduce;
 
-final class RankService
+final class VRateService
 {
     public function __invoke(Place $place): int
     {
-        $rankAttributes = [$place->type, $place->city, $place->sockets, $place->size, $place->location, $place->busyness, $place->view];
+        $attributes = [$place->type, $place->city, $place->sockets, $place->size, $place->location, $place->busyness, $place->view];
 
-        return array_reduce($rankAttributes, static function (mixed $carry, PropertyEnum $attribute): int {
+        return array_reduce($attributes, static function (mixed $carry, PropertyEnum $attribute): int {
             return $carry + $attribute::WEIGHT * $attribute->coefficient();
         });
     }

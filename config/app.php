@@ -51,7 +51,7 @@ return [
         NotificationServiceProvider::class,
         //PaginationServiceProvider::class,
         //PipelineServiceProvider::class,
-        //QueueServiceProvider::class,
+        QueueServiceProvider::class,
         //RedisServiceProvider::class,
         //PasswordResetServiceProvider::class,
         //SessionServiceProvider::class,

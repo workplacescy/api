@@ -11,6 +11,8 @@ use RuntimeException;
 
 use function json_decode;
 
+use function print_r;
+
 use const JSON_THROW_ON_ERROR;
 
 final class GooglePlacesService
@@ -26,7 +28,7 @@ final class GooglePlacesService
         $response = json_decode($this->googleMaps->load('textsearch')->setParam(['query' => $query])->get(), false, 512, JSON_THROW_ON_ERROR);
 
         if ($response->status !== 'OK') {
-            throw new RuntimeException('place_id not found for query '.$query);
+            throw new RuntimeException('place_id not found for query '.$query.\PHP_EOL.'Response: '.print_r($response, true));
         }
 
         return $response->results[0]->place_id;

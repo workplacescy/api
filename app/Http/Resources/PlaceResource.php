@@ -8,25 +8,25 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(required: ['id', 'name', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'size', 'location', 'busyness', 'view', 'rank'], properties: [
+#[OA\Schema(required: ['id', 'name', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'size', 'location', 'busyness', 'view', 'vRate'], properties: [
     new OA\Property(property: 'id', type: 'integer'),
     new OA\Property(property: 'name', type: 'string'),
-    new OA\Property(property: 'description', type: 'string'),
+    new OA\Property(property: 'description', type: 'string', nullable: true),
     new OA\Property(property: 'type', type: 'string'),
     new OA\Property(property: 'city', type: 'string'),
-    new OA\Property(property: 'placeId', type: 'string'),
-    new OA\Property(property: 'address', type: 'string'),
+    new OA\Property(property: 'placeId', type: 'string', nullable: true),
+    new OA\Property(property: 'address', type: 'string', nullable: true),
     new OA\Property(property: 'position', required: ['lat', 'lng'], properties: [
-        new OA\Property(property: 'lat', type: 'number', format: 'float'),
-        new OA\Property(property: 'lng', type: 'number', format: 'float'),
+        new OA\Property(property: 'lat', type: 'number', format: 'float', nullable: true),
+        new OA\Property(property: 'lng', type: 'number', format: 'float', nullable: true),
     ], type: 'object'),
-    new OA\Property(property: 'url', type: 'string'),
+    new OA\Property(property: 'url', type: 'string', nullable: true),
     new OA\Property(property: 'sockets', type: 'string'),
     new OA\Property(property: 'size', type: 'string'),
     new OA\Property(property: 'location', type: 'string'),
     new OA\Property(property: 'busyness', type: 'string'),
     new OA\Property(property: 'view', type: 'string'),
-    new OA\Property(property: 'rank', type: 'integer'),
+    new OA\Property(property: 'vRate', type: 'integer', nullable: true),
 ], type: 'object')]
 final class PlaceResource extends JsonResource
 {
@@ -55,7 +55,7 @@ final class PlaceResource extends JsonResource
             'location' => $this->location,
             'busyness' => $this->busyness,
             'view' => $this->view,
-            'rank' => $this->rank,
+            'vRate' => $this->v_rate,
         ];
     }
 }

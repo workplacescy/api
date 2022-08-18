@@ -43,9 +43,9 @@ final class PlaceFilter extends ModelFilter
     }
 
 
-    public function rank(int $rank): PlaceFilter
+    public function vRate(int $vRate): PlaceFilter
     {
-        return $this->where('rank', '>=', $rank);
+        return $this->where('v_rate', '>=', $vRate);
     }
 
 
