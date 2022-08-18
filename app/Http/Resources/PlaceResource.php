@@ -26,7 +26,7 @@ use OpenApi\Attributes as OA;
     new OA\Property(property: 'location', type: 'string'),
     new OA\Property(property: 'busyness', type: 'string'),
     new OA\Property(property: 'view', type: 'string'),
-    new OA\Property(property: 'vRate', type: 'integer', nullable: true),
+    new OA\Property(property: 'vRate', type: 'float', nullable: true),
 ], type: 'object')]
 final class PlaceResource extends JsonResource
 {

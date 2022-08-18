@@ -36,7 +36,7 @@ return new class extends Migration
             $table->enum('location', Location::values())->index();
             $table->enum('busyness', Busyness::values())->index();
             $table->enum('view', View::values())->index();
-            $table->integer('v_rate')->nullable()->index();
+            $table->unsignedFloat('v_rate', 2,1)->nullable()->index();
         });
     }
 

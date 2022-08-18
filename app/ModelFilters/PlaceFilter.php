@@ -43,7 +43,7 @@ final class PlaceFilter extends ModelFilter
     }
 
 
-    public function vRate(int $vRate): PlaceFilter
+    public function vRate(float $vRate): PlaceFilter
     {
         return $this->where('v_rate', '>=', $vRate);
     }

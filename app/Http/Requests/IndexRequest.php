@@ -22,7 +22,7 @@ use OpenApi\Attributes as OA;
 #[OA\Parameter(name: 'sockets', in: 'query', schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'type', in: 'query', schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'view', in: 'query', schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'vRate', in: 'query', schema: new OA\Schema(type: 'integer'))]
+#[OA\Parameter(name: 'vRate', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string', format: 'float', maximum: 0, minimum: 5))]
 final class IndexRequest extends FormRequest
 {
     /** @return array{busyness: string, city: string, location: string, size: string, sockets: string, type: string, view: string} */
@@ -36,7 +36,7 @@ final class IndexRequest extends FormRequest
             'sockets' => ['sometimes', 'required', new Enum(Sockets::class)],
             'type' => ['sometimes', 'required', new Enum(Type::class)],
             'view' => ['sometimes', 'required', new Enum(View::class)],
-            'vRate' => ['sometimes', 'required', 'integer', 'numeric', 'between:0,255'],
+            'vRate' => ['sometimes', 'required', 'float', 'numeric', 'between:0,5'],
         ];
     }
 }

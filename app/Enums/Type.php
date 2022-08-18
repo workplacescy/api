@@ -26,6 +26,6 @@ enum Type: string implements PropertyEnum
     /** @inheritDoc */
     public function coefficient(): int
     {
-        return 1;
+        return 5;
     }
 }
