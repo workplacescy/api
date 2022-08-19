@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Dto;
 
-class GooglePlaceDetails
+final class GooglePlaceDetails
 {
     public function __construct(
         public readonly string $address,

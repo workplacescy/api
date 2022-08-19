@@ -7,7 +7,7 @@ namespace App\Actions;
 use App\Models\Place;
 use App\Services\GooglePlacesService;
 
-class UpdateDetails
+final class UpdateDetails
 {
     public function __construct(private readonly GooglePlacesService $googlePlacesService)
     {
@@ -16,9 +16,7 @@ class UpdateDetails
 
     public function __invoke(Place $place): void
     {
-        $placeId = $this->googlePlacesService->findGooglePlaceId($place);
-
-        $place->place_id = $placeId;
+        $place->place_id = $this->googlePlacesService->findGooglePlaceId($place);
 
         $placeDetails = $this->googlePlacesService->findGooglePlaceDetails($place);
 

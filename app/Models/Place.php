@@ -25,8 +25,6 @@ final class Place extends Model
     use Searchable;
     use SoftDeletes;
 
-    private readonly GooglePlacesService $googlePlacesService;
-
     /** @inheritdoc */
     protected $casts = [
         'type' => Type::class,

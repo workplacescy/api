@@ -7,7 +7,7 @@ namespace App\Actions;
 use App\Models\Place;
 use App\Services\VRateService;
 
-class UpdateVRate
+final class UpdateVRate
 {
     public function __construct(private readonly VRateService $vRateService)
     {

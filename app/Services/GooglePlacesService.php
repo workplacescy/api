@@ -10,7 +10,6 @@ use GoogleMaps\GoogleMaps;
 use RuntimeException;
 
 use function json_decode;
-
 use function print_r;
 
 use const JSON_THROW_ON_ERROR;

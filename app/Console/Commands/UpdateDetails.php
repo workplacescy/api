@@ -8,24 +8,20 @@ use App\Actions\UpdateDetails as UpdateDetailsAction;
 use App\Models\Place;
 use Illuminate\Console\Command;
 
-class UpdateDetails extends Command
+final class UpdateDetails extends Command
 {
+    /** @inheritdoc */
     protected $signature = 'update:details {--f|force}';
 
+    /** @inheritdoc */
     protected $description = 'Update details from Google Places API';
 
 
     public function handle(UpdateDetailsAction $updateDetailsAction): int
     {
-        $force = $this->option('force');
+        $places = $this->option('force') ? Place::all() : Place::whereNull('place_id');
 
-        if ($force) {
-            $places = Place::all();
-        } else {
-            $places = Place::whereNull('place_id');
-        }
-
-        $places->each(function (Place $place) use ($updateDetailsAction): void {
+        $places->each(static function (Place $place) use ($updateDetailsAction): void {
             $updateDetailsAction($place);
         });
 
