@@ -23,7 +23,6 @@ RUN composer install --no-autoloader --no-dev --no-interaction --no-scripts
 COPY --chown=www-data:www-data . .
 
 ARG APP_ENV
-ARG MAP_API_KEY
 
 RUN set -eux ; \
     chown -R www-data:www-data vendor ; \
