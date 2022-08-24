@@ -164,7 +164,7 @@ final class DatabaseSeeder extends Seeder
 
         Place::create([
             'name' => 'Second Cup',
-            'description' => 'Big coffee shop with coffee, food and the average number of sockets. Located on the harbour',
+            'description' => 'Big coffee shop with coffee, food and the average number of sockets. Located in the harbour',
             'type' => Type::Cafe->value,
             'city' => City::AyiaNapa->value,
             'sockets' => Sockets::Few->value,
@@ -191,6 +191,18 @@ final class DatabaseSeeder extends Seeder
             'city' => City::AyiaNapa->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'The Melting Pot',
+            'description' => 'Friendly spot for coffee, wine and work',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
             'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
