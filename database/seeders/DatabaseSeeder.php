@@ -231,5 +231,17 @@ final class DatabaseSeeder extends Seeder
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
+
+        Place::create([
+            'name' => '90 Degrees',
+            'description' => 'Big coffee shop with a magnificent sea view',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Sea->value,
+        ]);
     }
 }
