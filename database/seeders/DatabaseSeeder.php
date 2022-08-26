@@ -207,5 +207,29 @@ final class DatabaseSeeder extends Seeder
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
+
+        Place::create([
+            'name' => 'Caffe Vergnano 1882',
+            'description' => 'Average-size family-owned cafe with coffee, drinks, ice cream and food',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'CoffeeBrands Makariou',
+            'description' => 'Small neighbourhood coffee shop with delicious doughnuts and football on TV',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Small->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
     }
 }
