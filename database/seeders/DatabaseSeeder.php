@@ -234,7 +234,7 @@ final class DatabaseSeeder extends Seeder
 
         Place::create([
             'name' => '90 Degrees',
-            'description' => 'Big coffee shop with a magnificent sea view',
+            'description' => 'Big coffee shop with a magnificent sea view and planes',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
