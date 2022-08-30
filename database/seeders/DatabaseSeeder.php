@@ -32,7 +32,6 @@ final class DatabaseSeeder extends Seeder
 
         Place::create([
             'name' => 'Caffè Nero Dasoudi',
-            'description' => 'Caffè Nero Dasoudi',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -271,6 +270,304 @@ final class DatabaseSeeder extends Seeder
             'description' => 'A shared workspace in Larnaca’s old town. It’s a place to meet, host and work - together',
             'type' => Type::Coworking->value,
             'city' => City::Larnaca->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Berry Kyprianou',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Berry Piale Pasa',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Lab Kyprianou',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Small->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Island Finikoudes',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Island Stratigou Timagia',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Island Dianellou',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::None->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Island Faneromenis',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffeehouse Stratigou Timagia',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Stasinou',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Starbucks Finikoudes',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Starbucks Ermou',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Kafeneion 26',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Small->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffeehouse Artemidos',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Small->value,
+            'location' => Location::Unhandy->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Caffè Nero Mackenzie',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'La Croissanterie',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Big->value,
+            'location' => Location::Unhandy->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Waycup',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'La Croissanterie Pareklisia',
+            'description' => 'A small and peaceful location opposite the holy Cyprus IT Malindi beach.',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Small->value,
+            'location' => Location::Unhandy->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Starbucks Georgiou',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Starbucks Makarou',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Caffè Nero Molos',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Caffè Nero Limassol Marina',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Caffè Nero QCG9+VVM',
+            'type' => Type::Cafe->value,
+            'city' => City::Paphos->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Caffè Nero Kato Paphos',
+            'type' => Type::Cafe->value,
+            'city' => City::Paphos->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffeehouse',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'iheart cafe',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Starbucks Griva Digeni',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Starbucks Mall of Cyprus',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
             'location' => Location::Convenient->value,
