@@ -574,5 +574,159 @@ final class DatabaseSeeder extends Seeder
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
+
+        Place::create([
+            'name' => 'Hub Design Platform',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Unhandy->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'The Business Bar',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Regus Victory House',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Regus Prodromou Avenue',
+            'type' => Type::Coworking->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Regus Jacovides Tower',
+            'type' => Type::Coworking->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Ecastica Arch. Makariou',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Ecastica Gala Court Chambers',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Ecastica Omega Business Center',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Ecastica Spyrou Kyprianou',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Arianthi Business Centre',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Pindou Business Centre',
+            'type' => Type::Coworking->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Coffee Corner',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::None->value,
+            'size' => Size::Average->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Sea->value,
+        ]);
+
+        Place::create([
+            'name' => 'Antwork',
+            'type' => Type::Coworking->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
+
+        Place::create([
+            'name' => 'Artius Office',
+            'type' => Type::Coworking->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
     }
 }
