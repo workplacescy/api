@@ -50,16 +50,7 @@ final class Place extends Model
             'id' => $this->id,
             'name' => $this->name,
             'description' => $this->description,
-            'type' => $this->type,
-            'city' => $this->city,
-            'place_id' => $this->place_id,
-            'url' => $this->url,
             'address' => $this->address,
-            'sockets' => $this->sockets,
-            'size' => $this->size,
-            'location' => $this->location,
-            'busyness' => $this->busyness,
-            'view' => $this->view,
         ];
     }
 }
