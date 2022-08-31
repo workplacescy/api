@@ -12,6 +12,7 @@ use App\Enums\Sockets;
 use App\Enums\Type;
 use App\Enums\View;
 use EloquentFilter\Filterable;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -41,6 +42,17 @@ final class Place extends Model
         'updated_at',
         'deleted_at',
     ];
+
+
+    /** @inheritdoc */
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        self::addGlobalScope('order', static function (Builder $builder): void {
+            $builder->orderBy('v_rate', 'desc');
+        });
+    }
 
 
     /** @inheritDoc */
