@@ -15,6 +15,7 @@ enum City: string implements PropertyEnum
     case Limassol = 'Limassol';
     case Nicosia = 'Nicosia';
     case Paphos = 'Paphos';
+    case Protaras = 'Protaras';
 
     public const WEIGHT = 1;
 
