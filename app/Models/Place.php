@@ -11,7 +11,6 @@ use App\Enums\Size;
 use App\Enums\Sockets;
 use App\Enums\Type;
 use App\Enums\View;
-use App\Services\GooglePlacesService;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
