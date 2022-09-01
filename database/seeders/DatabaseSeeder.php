@@ -750,5 +750,16 @@ final class DatabaseSeeder extends Seeder
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
+
+        Place::create([
+            'name' => 'Hügge',
+            'type' => Type::Coworking->value,
+            'city' => City::Paphos->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+        ]);
     }
 }
