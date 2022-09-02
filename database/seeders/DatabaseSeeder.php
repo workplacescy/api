@@ -761,5 +761,16 @@ final class DatabaseSeeder extends Seeder
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
+
+        Place::create([
+            'name' => 'Food Park City',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Many->value,
+            'size' => Size::Big->value,
+            'location' => Location::Convenient->value,
+            'busyness' => Busyness::Low->value,
+            'view' => View::Sea->value,
+        ]);
     }
 }
