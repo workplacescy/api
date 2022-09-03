@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Enums\Busyness;
 use App\Enums\City;
+use App\Enums\Noise;
 use App\Enums\Size;
 use App\Enums\Sockets;
 use App\Enums\Type;
@@ -31,6 +32,7 @@ return new class extends Migration
             $table->string('longitude', 20)->nullable()->index();
             $table->string('url')->nullable();
             $table->enum('sockets', Sockets::values())->index();
+            $table->enum('noise', Noise::values())->index();
             $table->enum('size', Size::values())->index();
             $table->enum('busyness', Busyness::values())->index();
             $table->enum('view', View::values())->index();

@@ -15,6 +15,7 @@ use OpenApi\Attributes as OA;
     new OA\Parameter(ref: '#/components/parameters/city'),
     new OA\Parameter(ref: '#/components/parameters/size'),
     new OA\Parameter(ref: '#/components/parameters/sockets'),
+    new OA\Parameter(ref: '#/components/parameters/noise'),
     new OA\Parameter(ref: '#/components/parameters/type'),
     new OA\Parameter(ref: '#/components/parameters/view'),
 ], responses: [

@@ -55,6 +55,12 @@ final class PlaceFilter extends ModelFilter
     }
 
 
+    public function noise(string $noise): PlaceFilter
+    {
+        return $this->where('noise', $noise);
+    }
+
+
     public function type(string $type): PlaceFilter
     {
         return $this->where('type', $type);
