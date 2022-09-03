@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(required: ['id', 'name', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'size', 'location', 'busyness', 'view', 'vRate'], properties: [
+#[OA\Schema(required: ['id', 'name', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'size', 'busyness', 'view', 'vRate'], properties: [
     new OA\Property(property: 'id', type: 'integer'),
     new OA\Property(property: 'name', type: 'string'),
     new OA\Property(property: 'description', type: 'string', nullable: true),
@@ -23,7 +23,6 @@ use OpenApi\Attributes as OA;
     new OA\Property(property: 'url', type: 'string', nullable: true),
     new OA\Property(property: 'sockets', type: 'string'),
     new OA\Property(property: 'size', type: 'string'),
-    new OA\Property(property: 'location', type: 'string'),
     new OA\Property(property: 'busyness', type: 'string'),
     new OA\Property(property: 'view', type: 'string'),
     new OA\Property(property: 'vRate', type: 'float', nullable: true),
@@ -52,7 +51,6 @@ final class PlaceResource extends JsonResource
             'url' => $this->url,
             'sockets' => $this->sockets,
             'size' => $this->size,
-            'location' => $this->location,
             'busyness' => $this->busyness,
             'view' => $this->view,
             'vRate' => $this->v_rate,

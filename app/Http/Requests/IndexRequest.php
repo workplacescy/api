@@ -6,7 +6,6 @@ namespace App\Http\Requests;
 
 use App\Enums\Busyness;
 use App\Enums\City;
-use App\Enums\Location;
 use App\Enums\Size;
 use App\Enums\Sockets;
 use App\Enums\Type;
@@ -17,7 +16,6 @@ use OpenApi\Attributes as OA;
 
 #[OA\Parameter(name: 'busyness', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'city', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
-#[OA\Parameter(name: 'location', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'size', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'sockets', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'type', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
@@ -25,13 +23,12 @@ use OpenApi\Attributes as OA;
 #[OA\Parameter(name: 'vRate', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string', format: 'float', maximum: 0, minimum: 5))]
 final class IndexRequest extends FormRequest
 {
-    /** @return array{busyness: string, city: string, location: string, size: string, sockets: string, type: string, view: string} */
+    /** @return array{busyness: string, city: string, size: string, sockets: string, type: string, view: string} */
     public function rules(): array
     {
         return [
             'busyness' => ['sometimes', 'required', new Enum(Busyness::class)],
             'city' => ['sometimes', 'required', new Enum(City::class)],
-            'location' => ['sometimes', 'required', new Enum(Location::class)],
             'size' => ['sometimes', 'required', new Enum(Size::class)],
             'sockets' => ['sometimes', 'required', new Enum(Sockets::class)],
             'type' => ['sometimes', 'required', new Enum(Type::class)],

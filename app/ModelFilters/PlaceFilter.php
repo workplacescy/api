@@ -37,12 +37,6 @@ final class PlaceFilter extends ModelFilter
     }
 
 
-    public function location(string $location): PlaceFilter
-    {
-        return $this->where('location', $location);
-    }
-
-
     public function vRate(float $vRate): PlaceFilter
     {
         return $this->where('v_rate', '>=', $vRate);

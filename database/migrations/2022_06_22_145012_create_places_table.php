@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 use App\Enums\Busyness;
 use App\Enums\City;
-use App\Enums\Location;
+use App\Enums\Size;
 use App\Enums\Sockets;
 use App\Enums\Type;
 use App\Enums\View;
-use App\Enums\Size;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -33,10 +32,9 @@ return new class extends Migration
             $table->string('url')->nullable();
             $table->enum('sockets', Sockets::values())->index();
             $table->enum('size', Size::values())->index();
-            $table->enum('location', Location::values())->index();
             $table->enum('busyness', Busyness::values())->index();
             $table->enum('view', View::values())->index();
-            $table->unsignedFloat('v_rate', 2,1)->nullable()->index();
+            $table->unsignedFloat('v_rate', 2, 1)->nullable()->index();
         });
     }
 

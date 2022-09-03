@@ -6,7 +6,6 @@ namespace App\Models;
 
 use App\Enums\Busyness;
 use App\Enums\City;
-use App\Enums\Location;
 use App\Enums\Size;
 use App\Enums\Sockets;
 use App\Enums\Type;
@@ -31,7 +30,6 @@ final class Place extends Model
         'city' => City::class,
         'sockets' => Sockets::class,
         'size' => Size::class,
-        'location' => Location::class,
         'busyness' => Busyness::class,
         'view' => View::class,
     ];

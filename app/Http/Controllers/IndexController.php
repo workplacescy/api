@@ -13,7 +13,6 @@ use OpenApi\Attributes as OA;
 #[OA\Get(path: '/', parameters: [
     new OA\Parameter(ref: '#/components/parameters/busyness'),
     new OA\Parameter(ref: '#/components/parameters/city'),
-    new OA\Parameter(ref: '#/components/parameters/location'),
     new OA\Parameter(ref: '#/components/parameters/size'),
     new OA\Parameter(ref: '#/components/parameters/sockets'),
     new OA\Parameter(ref: '#/components/parameters/type'),

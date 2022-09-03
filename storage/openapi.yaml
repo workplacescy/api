@@ -12,8 +12,6 @@ paths:
         -
           $ref: '#/components/parameters/city'
         -
-          $ref: '#/components/parameters/location'
-        -
           $ref: '#/components/parameters/size'
         -
           $ref: '#/components/parameters/sockets'
@@ -113,7 +111,6 @@ components:
         - url
         - sockets
         - size
-        - location
         - busyness
         - view
         - vRate
@@ -162,8 +159,6 @@ components:
           type: string
         size:
           type: string
-        location:
-          type: string
         busyness:
           type: string
         view:
@@ -202,12 +197,6 @@ components:
         type: string
     city:
       name: city
-      in: query
-      allowEmptyValue: false
-      schema:
-        type: string
-    location:
-      name: location
       in: query
       allowEmptyValue: false
       schema:

@@ -6,7 +6,6 @@ namespace Database\Seeders;
 
 use App\Enums\Busyness;
 use App\Enums\City;
-use App\Enums\Location;
 use App\Enums\Size;
 use App\Enums\Sockets;
 use App\Enums\Type;
@@ -25,7 +24,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Garden->value,
         ]);
@@ -36,7 +34,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -48,7 +45,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Small->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -60,7 +56,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
         ]);
@@ -72,7 +67,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -84,7 +78,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Small->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -96,7 +89,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -108,7 +100,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -120,7 +111,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Unhandy->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -132,7 +122,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::None->value,
             'size' => Size::Small->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -144,7 +133,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -156,7 +144,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::None->value,
             'size' => Size::Small->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -168,7 +155,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::AyiaNapa->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -179,7 +165,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::AyiaNapa->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -190,7 +175,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::AyiaNapa->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -202,7 +186,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -214,7 +197,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -226,7 +208,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Small->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -238,7 +219,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Sea->value,
         ]);
@@ -249,7 +229,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -260,7 +239,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -272,7 +250,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -283,7 +260,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -294,7 +270,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
         ]);
@@ -305,7 +280,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Small->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -316,7 +290,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
         ]);
@@ -327,7 +300,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -338,7 +310,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::None->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -349,7 +320,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -360,7 +330,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -371,7 +340,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -382,7 +350,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
         ]);
@@ -393,7 +360,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -404,7 +370,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Small->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -415,7 +380,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Small->value,
-            'location' => Location::Unhandy->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -426,7 +390,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
         ]);
@@ -437,7 +400,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Unhandy->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -448,19 +410,16 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
 
         Place::create([
             'name' => 'La Croissanterie Pareklisia',
-            'description' => 'A small and peaceful location opposite the holy Cyprus IT Malindi beach.',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Small->value,
-            'location' => Location::Unhandy->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
         ]);
@@ -471,7 +430,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -482,7 +440,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -493,7 +450,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
         ]);
@@ -504,7 +460,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
         ]);
@@ -515,7 +470,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Paphos->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
         ]);
@@ -526,7 +480,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Paphos->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
         ]);
@@ -537,7 +490,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -548,7 +500,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -559,7 +510,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -570,7 +520,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
         ]);
@@ -581,7 +530,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Unhandy->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -592,7 +540,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -603,7 +550,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -614,7 +560,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -625,7 +570,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -636,7 +580,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -647,7 +590,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -658,7 +600,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -669,7 +610,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -680,7 +620,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -691,7 +630,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -702,7 +640,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::None->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
         ]);
@@ -713,7 +650,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -724,7 +660,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -735,7 +670,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -746,7 +680,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Protaras->value,
             'sockets' => Sockets::Few->value,
             'size' => Size::Average->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -757,7 +690,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Paphos->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
         ]);
@@ -768,7 +700,6 @@ final class DatabaseSeeder extends Seeder
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
             'size' => Size::Big->value,
-            'location' => Location::Convenient->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Sea->value,
         ]);
