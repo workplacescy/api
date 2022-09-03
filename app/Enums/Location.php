@@ -5,22 +5,16 @@ declare(strict_types=1);
 namespace App\Enums;
 
 use App\Contracts\PropertyEnum;
-
-use function array_map;
+use App\Traits\EnumValues;
 
 enum Location: string implements PropertyEnum
 {
+    use EnumValues;
+
     case Convenient = 'Convenient';
     case Unhandy = 'Unhandy';
 
     public const WEIGHT = 2;
-
-
-    /** @return string[] */
-    public static function values(): array
-    {
-        return array_map(static fn(self $case): string => $case->value, self::cases());
-    }
 
 
     /** @inheritDoc */
