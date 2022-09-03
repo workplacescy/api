@@ -24,6 +24,6 @@ final class SearchController extends Controller
     {
         $q = $request->safe(['q'])['q'];
 
-        return new PlaceCollection(Place::search($q)->get()->sortByDesc('v_rate'));
+        return new PlaceCollection(Place::search($q)->get()->sortByDesc('v_rate')->sortBy('name'));
     }
 }

@@ -52,7 +52,7 @@ final class Place extends Model
         parent::boot();
 
         self::addGlobalScope('order', static function (Builder $builder): void {
-            $builder->orderByDesc('v_rate');
+            $builder->orderByDesc('v_rate')->orderBy('name');
         });
     }
 
