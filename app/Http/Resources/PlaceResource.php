@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(required: ['id', 'name', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'vRate'], properties: [
+#[OA\Schema(required: ['id', 'name', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'cuisine', 'vRate'], properties: [
     new OA\Property(property: 'id', type: 'integer'),
     new OA\Property(property: 'name', type: 'string'),
     new OA\Property(property: 'description', type: 'string', nullable: true),
@@ -26,6 +26,7 @@ use OpenApi\Attributes as OA;
     new OA\Property(property: 'size', type: 'string'),
     new OA\Property(property: 'busyness', type: 'string'),
     new OA\Property(property: 'view', type: 'string'),
+    new OA\Property(property: 'cuisine', type: 'string'),
     new OA\Property(property: 'vRate', type: 'float', nullable: true),
 ], type: 'object')]
 final class PlaceResource extends JsonResource
@@ -55,6 +56,7 @@ final class PlaceResource extends JsonResource
             'size' => $this->size,
             'busyness' => $this->busyness,
             'view' => $this->view,
+            'cuisine' => $this->cuisine,
             'vRate' => $this->v_rate,
         ];
     }

@@ -18,6 +18,7 @@ use OpenApi\Attributes as OA;
     new OA\Parameter(ref: '#/components/parameters/noise'),
     new OA\Parameter(ref: '#/components/parameters/type'),
     new OA\Parameter(ref: '#/components/parameters/view'),
+    new OA\Parameter(ref: '#/components/parameters/cuisine'),
 ], responses: [
     new OA\Response(ref: '#/components/responses/PlaceCollectionResponse', response: 200),
     new OA\Response(ref: '#/components/responses/BadRequestError', response: 400),

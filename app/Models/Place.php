@@ -6,6 +6,7 @@ namespace App\Models;
 
 use App\Enums\Busyness;
 use App\Enums\City;
+use App\Enums\Cuisine;
 use App\Enums\Noise;
 use App\Enums\Size;
 use App\Enums\Sockets;
@@ -34,6 +35,7 @@ final class Place extends Model
         'size' => Size::class,
         'busyness' => Busyness::class,
         'view' => View::class,
+        'cuisine' => Cuisine::class,
     ];
 
     /** @inheritdoc */

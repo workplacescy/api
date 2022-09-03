@@ -21,6 +21,8 @@ paths:
           $ref: '#/components/parameters/type'
         -
           $ref: '#/components/parameters/view'
+        -
+          $ref: '#/components/parameters/cuisine'
       responses:
         '200':
           $ref: '#/components/responses/PlaceCollectionResponse'
@@ -116,6 +118,7 @@ components:
         - size
         - busyness
         - view
+        - cuisine
         - vRate
       properties:
         id:
@@ -167,6 +170,8 @@ components:
         busyness:
           type: string
         view:
+          type: string
+        cuisine:
           type: string
         vRate:
           type:
@@ -232,6 +237,12 @@ components:
         type: string
     view:
       name: view
+      in: query
+      allowEmptyValue: false
+      schema:
+        type: string
+    cuisine:
+      name: cuisine
       in: query
       allowEmptyValue: false
       schema:

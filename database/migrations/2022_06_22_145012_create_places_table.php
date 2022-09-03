@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use App\Enums\Busyness;
 use App\Enums\City;
+use App\Enums\Cuisine;
 use App\Enums\Noise;
 use App\Enums\Size;
 use App\Enums\Sockets;
@@ -36,6 +37,7 @@ return new class extends Migration
             $table->enum('size', Size::values())->index();
             $table->enum('busyness', Busyness::values())->index();
             $table->enum('view', View::values())->index();
+            $table->enum('cuisine', Cuisine::values())->index();
             $table->unsignedFloat('v_rate', 2, 1)->nullable()->index();
         });
     }

@@ -71,4 +71,10 @@ final class PlaceFilter extends ModelFilter
     {
         return $this->where('view', $view);
     }
+
+
+    public function cuisine(string $cuisine): PlaceFilter
+    {
+        return $this->where('cuisine', $cuisine);
+    }
 }

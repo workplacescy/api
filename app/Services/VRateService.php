@@ -14,7 +14,7 @@ final class VRateService
 {
     public function __invoke(Place $place): float
     {
-        $attributes = [$place->type, $place->city, $place->sockets, $place->size, $place->noise, $place->busyness, $place->view];
+        $attributes = [$place->type, $place->city, $place->sockets, $place->size, $place->noise, $place->busyness, $place->view, $place->cuisine];
 
         return round($this->rateTotal($attributes), 1);
     }

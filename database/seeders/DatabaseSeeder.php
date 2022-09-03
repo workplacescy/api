@@ -6,6 +6,7 @@ namespace Database\Seeders;
 
 use App\Enums\Busyness;
 use App\Enums\City;
+use App\Enums\Cuisine;
 use App\Enums\Noise;
 use App\Enums\Size;
 use App\Enums\Sockets;
@@ -28,6 +29,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Garden->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -39,6 +41,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -51,6 +54,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -63,6 +67,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -75,6 +80,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -87,6 +93,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -99,6 +106,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -111,6 +119,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -123,6 +132,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -135,6 +145,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -147,6 +158,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -159,6 +171,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -171,6 +184,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -182,6 +196,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -193,6 +208,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -205,6 +221,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -217,6 +234,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -229,6 +247,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -241,6 +260,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -252,6 +272,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -263,6 +284,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -275,6 +297,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -286,6 +309,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -297,6 +321,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -308,6 +333,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -319,6 +345,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -330,6 +357,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -341,6 +369,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -352,6 +381,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -363,6 +393,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -374,6 +405,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -385,6 +417,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -396,6 +429,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -407,6 +441,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -418,6 +453,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -429,6 +465,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -440,6 +477,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -451,6 +489,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -462,6 +501,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Small->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -473,6 +513,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -484,6 +525,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -495,6 +537,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -506,6 +549,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -517,6 +561,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -528,6 +573,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -539,6 +585,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -550,6 +597,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -561,6 +609,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -572,6 +621,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::High->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -583,6 +633,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -594,6 +645,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -605,6 +657,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -616,6 +669,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -627,6 +681,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -638,6 +693,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -649,6 +705,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -660,6 +717,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -671,6 +729,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -682,6 +741,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -693,6 +753,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -704,6 +765,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -715,6 +777,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -726,6 +789,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -737,6 +801,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -748,6 +813,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Average->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
 
         Place::create([
@@ -759,6 +825,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Average->value,
             'view' => View::Street->value,
+            'cuisine' => Cuisine::Coffee->value,
         ]);
 
         Place::create([
@@ -770,6 +837,7 @@ final class DatabaseSeeder extends Seeder
             'size' => Size::Big->value,
             'busyness' => Busyness::Low->value,
             'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
         ]);
     }
 }

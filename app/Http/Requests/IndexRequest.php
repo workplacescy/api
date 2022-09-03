@@ -6,6 +6,7 @@ namespace App\Http\Requests;
 
 use App\Enums\Busyness;
 use App\Enums\City;
+use App\Enums\Cuisine;
 use App\Enums\Noise;
 use App\Enums\Size;
 use App\Enums\Sockets;
@@ -22,6 +23,7 @@ use OpenApi\Attributes as OA;
 #[OA\Parameter(name: 'noise', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'type', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'view', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
+#[OA\Parameter(name: 'cuisine', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string'))]
 #[OA\Parameter(name: 'vRate', in: 'query', allowEmptyValue: false, schema: new OA\Schema(type: 'string', format: 'float', maximum: 0, minimum: 5))]
 final class IndexRequest extends FormRequest
 {
@@ -36,6 +38,7 @@ final class IndexRequest extends FormRequest
             'noise' => ['sometimes', 'required', new Enum(Noise::class)],
             'type' => ['sometimes', 'required', new Enum(Type::class)],
             'view' => ['sometimes', 'required', new Enum(View::class)],
+            'cuisine' => ['sometimes', 'required', new Enum(Cuisine::class)],
             'vRate' => ['sometimes', 'required', 'float', 'numeric', 'between:0,5'],
         ];
     }
