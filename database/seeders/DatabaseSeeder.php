@@ -936,5 +936,18 @@ final class DatabaseSeeder extends Seeder
             'view' => View::Street->value,
             'cuisine' => Cuisine::Full->value,
         ]);
+
+        Place::create([
+            'name' => 'Bean Bar Old Port',
+            'description' => 'Nice place in the heart of Limassol for quick fixes or meetings',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::None->value,
+            'noise' => Noise::Noisy->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
     }
 }
