@@ -839,5 +839,102 @@ final class DatabaseSeeder extends Seeder
             'view' => View::Sea->value,
             'cuisine' => Cuisine::Full->value,
         ]);
+
+        Place::create([
+            'name' => 'Second Cup',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Big->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Second Cup',
+            'type' => Type::Cafe->value,
+            'city' => City::Paralimni->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Big->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Second Cup Egkomi',
+            'description' => 'Lala Cafe',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Big->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Lála Café Stasinou',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Big->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Second Cup Lakatamia',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Big->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Second Cup Stadiou',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Big->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Second Cup Latsia',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Big->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Second Cup Recanto store',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
     }
 }
