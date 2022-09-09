@@ -949,5 +949,162 @@ final class DatabaseSeeder extends Seeder
             'view' => View::Street->value,
             'cuisine' => Cuisine::Full->value,
         ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Airport',
+            'description' => 'There are two places: inside and outside the Larnaca airport. Both are appropriate for a snack and some quick tasks',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Noisy->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Nicosia Central',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Makariou',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Stavrou',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Nikolaou',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Odessa Hotel',
+            'type' => Type::Cafe->value,
+            'city' => City::Protaras->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Kallipoleos',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Nicosia Mall',
+            'type' => Type::Cafe->value,
+            'city' => City::Nicosia->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Noisy->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Makariou',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Germasogeia',
+            'type' => Type::Cafe->value,
+            'city' => City::Limassol->value,
+            'sockets' => Sockets::Many->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Metropolis mall',
+            'type' => Type::Cafe->value,
+            'city' => City::Larnaca->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Noisy->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::High->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee Kouklia',
+            'type' => Type::Cafe->value,
+            'city' => City::Paphos->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Sea->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
+
+        Place::create([
+            'name' => 'Costa Coffee QC48+FR5',
+            'type' => Type::Cafe->value,
+            'city' => City::Paphos->value,
+            'sockets' => Sockets::Few->value,
+            'noise' => Noise::Medium->value,
+            'size' => Size::Average->value,
+            'busyness' => Busyness::Average->value,
+            'view' => View::Street->value,
+            'cuisine' => Cuisine::Full->value,
+        ]);
     }
 }
