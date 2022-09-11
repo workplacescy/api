@@ -3,17 +3,20 @@
 declare(strict_types=1);
 
 use App\Providers\AppServiceProvider;
-use App\Providers\EventServiceProvider;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Broadcasting\BroadcastServiceProvider;
+use Illuminate\Auth\AuthServiceProvider;
+use Illuminate\Auth\Passwords\PasswordResetServiceProvider;
 use Illuminate\Cache\CacheServiceProvider;
+use Illuminate\Cookie\CookieServiceProvider;
 use Illuminate\Database\DatabaseServiceProvider;
+use Illuminate\Encryption\EncryptionServiceProvider;
 use Illuminate\Filesystem\FilesystemServiceProvider;
 use Illuminate\Foundation\Providers\ConsoleSupportServiceProvider;
 use Illuminate\Foundation\Providers\FoundationServiceProvider;
+use Illuminate\Hashing\HashServiceProvider;
 use Illuminate\Notifications\NotificationServiceProvider;
-use Illuminate\Pipeline\PipelineServiceProvider;
 use Illuminate\Queue\QueueServiceProvider;
+use Illuminate\Session\SessionServiceProvider;
 use Illuminate\Support\Facades\Facade;
 use Illuminate\Translation\TranslationServiceProvider;
 use Illuminate\Validation\ValidationServiceProvider;
@@ -36,25 +39,25 @@ return [
         // 'store'  => 'redis',
     ],
     'providers' => [
-        //AuthServiceProvider::class,
+        AuthServiceProvider::class,
         //BroadcastServiceProvider::class,
         //BusServiceProvider::class,
         CacheServiceProvider::class,
         ConsoleSupportServiceProvider::class,
-        //CookieServiceProvider::class,
+        CookieServiceProvider::class,
         DatabaseServiceProvider::class,
-        //EncryptionServiceProvider::class,
+        EncryptionServiceProvider::class,
         FilesystemServiceProvider::class,
         FoundationServiceProvider::class,
-        //HashServiceProvider::class,
+        HashServiceProvider::class,
         //MailServiceProvider::class,
         NotificationServiceProvider::class,
         //PaginationServiceProvider::class,
         //PipelineServiceProvider::class,
         QueueServiceProvider::class,
         //RedisServiceProvider::class,
-        //PasswordResetServiceProvider::class,
-        //SessionServiceProvider::class,
+        PasswordResetServiceProvider::class,
+        SessionServiceProvider::class,
         TranslationServiceProvider::class,
         ValidationServiceProvider::class,
         ViewServiceProvider::class,

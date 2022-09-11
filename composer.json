@@ -40,6 +40,7 @@
         "ext-sqlite3": "*",
         "ext-phar": "*",
         "alexpechkarev/google-maps": "*",
+        "area17/twill": "^3.0",
         "laravel/framework": "^9.0",
         "laravel/scout": "*",
         "sentry/sentry-laravel": "*",
@@ -49,6 +50,7 @@
         "ext-intl": "*",
         "brianium/paratest": "*",
         "hotmeteor/spectator": "*",
+        "laravel/dusk": "*",
         "mockery/mockery": "*",
         "pestphp/pest": "*",
         "pestphp/pest-plugin-laravel": "*",
@@ -58,10 +60,7 @@
     },
     "replace": {
         "dragonmantank/cron-expression": "*",
-        "egulias/email-validator": "*",
         "league/commonmark": "*",
-        "league/flysystem": "*",
-        "symfony/mime": "*",
         "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
         "symfony/polyfill-intl-grapheme": "*",
@@ -70,8 +69,7 @@
         "symfony/polyfill-php72": "*",
         "symfony/polyfill-php73": "*",
         "symfony/polyfill-php80": "*",
-        "symfony/polyfill-php81": "*",
-        "tijsverkoyen/css-to-inline-styles": "*"
+        "symfony/polyfill-php81": "*"
     },
     "autoload": {
         "psr-4": {
