@@ -17,6 +17,12 @@ enum Location: string implements PropertyEnum
     public const WEIGHT = 2;
 
 
+    public static function default(): self
+    {
+        return self::Convenient;
+    }
+
+
     /** @inheritDoc */
     public function coefficient(): int
     {

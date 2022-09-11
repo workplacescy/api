@@ -18,6 +18,12 @@ enum Noise: string implements PropertyEnum
     public const WEIGHT = 2;
 
 
+    public static function default(): self
+    {
+        return self::Medium;
+    }
+
+
     /** @inheritDoc */
     public function coefficient(): int
     {

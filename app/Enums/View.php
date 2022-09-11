@@ -18,6 +18,12 @@ enum View: string implements PropertyEnum
     public const WEIGHT = 1;
 
 
+    public static function default(): self
+    {
+        return self::Street;
+    }
+
+
     /** @inheritDoc */
     public function coefficient(): int
     {

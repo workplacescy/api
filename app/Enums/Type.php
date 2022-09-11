@@ -17,6 +17,12 @@ enum Type: string implements PropertyEnum
     public const WEIGHT = 1;
 
 
+    public static function default(): self
+    {
+        return self::Cafe;
+    }
+
+
     /** @inheritDoc */
     public function coefficient(): int
     {

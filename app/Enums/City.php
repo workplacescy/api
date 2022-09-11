@@ -22,6 +22,12 @@ enum City: string implements PropertyEnum
     public const WEIGHT = 1;
 
 
+    public static function default(): self
+    {
+        return self::Limassol;
+    }
+
+
     /** @inheritDoc */
     public function coefficient(): int
     {

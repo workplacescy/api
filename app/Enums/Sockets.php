@@ -18,6 +18,12 @@ enum Sockets: string implements PropertyEnum
     public const WEIGHT = 3;
 
 
+    public static function default(): self
+    {
+        return self::Few;
+    }
+
+
     /** @inheritDoc */
     public function coefficient(): int
     {

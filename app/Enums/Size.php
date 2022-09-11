@@ -18,6 +18,12 @@ enum Size: string implements PropertyEnum
     public const WEIGHT = 2;
 
 
+    public static function default(): self
+    {
+        return self::Average;
+    }
+
+
     /** @inheritDoc */
     public function coefficient(): int
     {

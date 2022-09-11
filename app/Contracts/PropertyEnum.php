@@ -6,6 +6,9 @@ namespace App\Contracts;
 
 interface PropertyEnum
 {
+    public static function default(): self;
+
+
     /** @return string[] */
     public static function values(): array;
 
