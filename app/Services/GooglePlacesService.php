@@ -23,7 +23,7 @@ final class GooglePlacesService
 
     public function findGooglePlaceId(Place $place): string
     {
-        $query = "{$place->name},{$place->city->value}";
+        $query = "{$place->title},{$place->city->value}";
         $response = json_decode($this->googleMaps->load('textsearch')->setParam(['query' => $query])->get(), false, 512, JSON_THROW_ON_ERROR);
 
         if ($response->status !== 'OK') {

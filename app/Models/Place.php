@@ -52,7 +52,7 @@ final class Place extends Model
         parent::boot();
 
         self::addGlobalScope('order', static function (Builder $builder): void {
-            $builder->orderByDesc('v_rate')->orderBy('name');
+            $builder->orderByDesc('v_rate')->orderBy('title');
         });
     }
 
@@ -62,7 +62,7 @@ final class Place extends Model
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'title' => $this->title,
             'description' => $this->description,
             'address' => $this->address,
         ];

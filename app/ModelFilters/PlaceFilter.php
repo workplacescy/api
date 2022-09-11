@@ -17,7 +17,7 @@ final class PlaceFilter extends ModelFilter
         'createdAt',
         'updatedAt',
         'deletedAt',
-        'name',
+        'title',
         'description',
         'place',
         'latitude',

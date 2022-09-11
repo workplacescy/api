@@ -22,7 +22,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->softDeletes();
-            $table->string('name')->index();
+            $table->string('title')->index();
             $table->text('description')->nullable()->index();
             //$table->text('description')->nullable()->fulltext();
             $table->enum('type', Type::values())->index();

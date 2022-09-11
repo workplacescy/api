@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 use OpenApi\Attributes as OA;
 
-#[OA\Schema(required: ['id', 'name', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'cuisine', 'vRate'], properties: [
+#[OA\Schema(required: ['id', 'title', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'cuisine', 'vRate'], properties: [
     new OA\Property(property: 'id', type: 'integer'),
-    new OA\Property(property: 'name', type: 'string'),
+    new OA\Property(property: 'title', type: 'string'),
     new OA\Property(property: 'description', type: 'string', nullable: true),
     new OA\Property(property: 'type', type: 'string'),
     new OA\Property(property: 'city', type: 'string'),
@@ -34,13 +34,13 @@ final class PlaceResource extends JsonResource
     /**
      * @inheritDoc
      * @param Request $request
-     * @return array{id: int, type: string, properties: array{name: string, description: string, placeId: string}, geometry: array{type: string, coordinates: float[]}}
+     * @return array{id: int, type: string, properties: array{title: string, description: string, placeId: string}, geometry: array{type: string, coordinates: float[]}}
      */
     public function toArray($request): array
     {
         return [
             'id' => $this->id,
-            'name' => $this->name,
+            'title' => $this->title,
             'description' => $this->description,
             'type' => $this->type,
             'city' => $this->city,

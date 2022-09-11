@@ -20,7 +20,7 @@ final class DatabaseSeeder extends Seeder
     public function run(): void
     {
         Place::create([
-            'name' => "Paul's Coffee Roasters",
+            'title' => "Paul's Coffee Roasters",
             'description' => 'Cosy coffee shop in Larnaca downtown. There are 5-7 well-known coffee origins, V60, Cold Brew and classic drinks. A small main hall and a large garden in the backyard. Few power outlets for digital nomads',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
@@ -33,7 +33,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffè Nero Dasoudi',
+            'title' => 'Caffè Nero Dasoudi',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -45,7 +45,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Uluwatu Specialty Coffee',
+            'title' => 'Uluwatu Specialty Coffee',
             'description' => 'Large selection of coffee origins and comfortable sofas in the old town of Limassol. Few outlets only',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
@@ -58,7 +58,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'South Coast Specialty Coffee',
+            'title' => 'South Coast Specialty Coffee',
             'description' => 'Large coffee shop in the Mackenzie beach area. Several classic coffee origins, tables with sockets and a separate playground for children',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
@@ -71,7 +71,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'The Daily Roast',
+            'title' => 'The Daily Roast',
             'description' => 'Friendly coffee shop with smiling barista, breakfast and brunch. There are few tables with outlets inside and outside',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
@@ -84,7 +84,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Green Colibri',
+            'title' => 'Green Colibri',
             'description' => 'High-quality coffee and drinks to work, study, pass a day, and snack. Pleasant design and friendly staff',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
@@ -97,7 +97,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Kollaborative Coffee Roasters',
+            'title' => 'Kollaborative Coffee Roasters',
             'description' => 'Middle-size coffee shop and bar in Nicosia old town. Selection of coffee origins, few tables inside and outside',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
@@ -110,7 +110,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'A κχoffee project',
+            'title' => 'A κχoffee project',
             'description' => 'Lovely coffee shop with a large selection of good coffee beans, pour-overs and a pleasant environment',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
@@ -123,7 +123,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'iDesk.space',
+            'title' => 'iDesk.space',
             'description' => 'iDesk.space is centrally based in Larnaca, Cyprus. Easy going setup in a Relaxed atmosphere, cool space with super fast internet and cool people. Local knowledge for assisting if you need anything not work related such as places to go, things to see, where to eat, finding a place to live ;)',
             'type' => Type::Coworking->value,
             'city' => City::Larnaca->value,
@@ -136,7 +136,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Dear all',
+            'title' => 'Dear all',
             'description' => 'Small coffee shop with good food and without sockets',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
@@ -149,7 +149,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'The Shopkeeper & Co',
+            'title' => 'The Shopkeeper & Co',
             'description' => 'Bizarre busy store and coffee bar',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
@@ -162,7 +162,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Stories',
+            'title' => 'Stories',
             'description' => 'Tiny coffee shop with ordinary coffee, croissants and without sockets',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
@@ -175,7 +175,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup',
+            'title' => 'Second Cup',
             'description' => 'Big coffee shop with coffee, food and the average number of sockets. Located in the harbour',
             'type' => Type::Cafe->value,
             'city' => City::AyiaNapa->value,
@@ -188,7 +188,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee',
+            'title' => 'Costa Coffee',
             'type' => Type::Cafe->value,
             'city' => City::AyiaNapa->value,
             'sockets' => Sockets::Few->value,
@@ -200,7 +200,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => "Gloria Jean's Coffees",
+            'title' => "Gloria Jean's Coffees",
             'type' => Type::Cafe->value,
             'city' => City::AyiaNapa->value,
             'sockets' => Sockets::Few->value,
@@ -212,7 +212,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'The Melting Pot',
+            'title' => 'The Melting Pot',
             'description' => 'Friendly spot for coffee, wine and work',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
@@ -225,7 +225,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffe Vergnano 1882',
+            'title' => 'Caffe Vergnano 1882',
             'description' => 'Average-size family-owned cafe with coffee, drinks, ice cream and food',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
@@ -238,7 +238,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'CoffeeBrands Makariou',
+            'title' => 'CoffeeBrands Makariou',
             'description' => 'Small neighbourhood coffee shop with delicious doughnuts and football on TV',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
@@ -251,7 +251,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => '90 Degrees',
+            'title' => '90 Degrees',
             'description' => 'Big coffee shop with a magnificent sea view and planes',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
@@ -264,7 +264,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second cup',
+            'title' => 'Second cup',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
@@ -276,7 +276,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffè Nero Oroklini',
+            'title' => 'Caffè Nero Oroklini',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
@@ -288,7 +288,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Native',
+            'title' => 'Native',
             'description' => 'A shared workspace in Larnaca’s old town. It’s a place to meet, host and work - together',
             'type' => Type::Coworking->value,
             'city' => City::Larnaca->value,
@@ -301,7 +301,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Berry Kyprianou',
+            'title' => 'Coffee Berry Kyprianou',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
@@ -313,7 +313,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Berry Piale Pasa',
+            'title' => 'Coffee Berry Piale Pasa',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -325,7 +325,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Lab Kyprianou',
+            'title' => 'Coffee Lab Kyprianou',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -337,7 +337,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Island Finikoudes',
+            'title' => 'Coffee Island Finikoudes',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -349,7 +349,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Island Stratigou Timagia',
+            'title' => 'Coffee Island Stratigou Timagia',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -361,7 +361,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Island Dianellou',
+            'title' => 'Coffee Island Dianellou',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::None->value,
@@ -373,7 +373,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Island Faneromenis',
+            'title' => 'Coffee Island Faneromenis',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -385,7 +385,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffeehouse Stratigou Timagia',
+            'title' => 'Coffeehouse Stratigou Timagia',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -397,7 +397,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Stasinou',
+            'title' => 'Costa Coffee Stasinou',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
@@ -409,7 +409,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks Finikoudes',
+            'title' => 'Starbucks Finikoudes',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -421,7 +421,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks Ermou',
+            'title' => 'Starbucks Ermou',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -433,7 +433,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Kafeneion 26',
+            'title' => 'Kafeneion 26',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -445,7 +445,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffeehouse Artemidos',
+            'title' => 'Coffeehouse Artemidos',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -457,7 +457,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffè Nero Mackenzie',
+            'title' => 'Caffè Nero Mackenzie',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
@@ -469,7 +469,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'La Croissanterie',
+            'title' => 'La Croissanterie',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -481,7 +481,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Waycup',
+            'title' => 'Waycup',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
@@ -493,7 +493,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'La Croissanterie Pareklisia',
+            'title' => 'La Croissanterie Pareklisia',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
@@ -505,7 +505,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks Georgiou',
+            'title' => 'Starbucks Georgiou',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -517,7 +517,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks Makarou',
+            'title' => 'Starbucks Makarou',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -529,7 +529,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffè Nero Molos',
+            'title' => 'Caffè Nero Molos',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
@@ -541,7 +541,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffè Nero Limassol Marina',
+            'title' => 'Caffè Nero Limassol Marina',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -553,7 +553,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffè Nero QCG9+VVM',
+            'title' => 'Caffè Nero QCG9+VVM',
             'type' => Type::Cafe->value,
             'city' => City::Paphos->value,
             'sockets' => Sockets::Few->value,
@@ -565,7 +565,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Caffè Nero Kato Paphos',
+            'title' => 'Caffè Nero Kato Paphos',
             'type' => Type::Cafe->value,
             'city' => City::Paphos->value,
             'sockets' => Sockets::Few->value,
@@ -577,7 +577,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffeehouse',
+            'title' => 'Coffeehouse',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
@@ -589,7 +589,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'iheart cafe',
+            'title' => 'iheart cafe',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
@@ -601,7 +601,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks Griva Digeni',
+            'title' => 'Starbucks Griva Digeni',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -613,7 +613,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks Mall of Cyprus',
+            'title' => 'Starbucks Mall of Cyprus',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
@@ -625,7 +625,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Hub Design Platform',
+            'title' => 'Hub Design Platform',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -637,7 +637,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'The Business Bar',
+            'title' => 'The Business Bar',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -649,7 +649,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Regus Victory House',
+            'title' => 'Regus Victory House',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -661,7 +661,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Regus Prodromou Avenue',
+            'title' => 'Regus Prodromou Avenue',
             'type' => Type::Coworking->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
@@ -673,7 +673,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Regus Jacovides Tower',
+            'title' => 'Regus Jacovides Tower',
             'type' => Type::Coworking->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
@@ -685,7 +685,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Ecastica Arch. Makariou',
+            'title' => 'Ecastica Arch. Makariou',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -697,7 +697,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Ecastica Gala Court Chambers',
+            'title' => 'Ecastica Gala Court Chambers',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -709,7 +709,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Ecastica Omega Business Center',
+            'title' => 'Ecastica Omega Business Center',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -721,7 +721,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Ecastica Spyrou Kyprianou',
+            'title' => 'Ecastica Spyrou Kyprianou',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -733,7 +733,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Arianthi Business Centre',
+            'title' => 'Arianthi Business Centre',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -745,7 +745,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Pindou Business Centre',
+            'title' => 'Pindou Business Centre',
             'type' => Type::Coworking->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
@@ -757,7 +757,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Coffee Corner',
+            'title' => 'Coffee Corner',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::None->value,
@@ -769,7 +769,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Antwork',
+            'title' => 'Antwork',
             'type' => Type::Coworking->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -781,7 +781,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Artius Office',
+            'title' => 'Artius Office',
             'type' => Type::Coworking->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Many->value,
@@ -793,7 +793,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks Anexartisias',
+            'title' => 'Starbucks Anexartisias',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -805,7 +805,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Starbucks',
+            'title' => 'Starbucks',
             'type' => Type::Cafe->value,
             'city' => City::Protaras->value,
             'sockets' => Sockets::Few->value,
@@ -817,7 +817,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Hügge',
+            'title' => 'Hügge',
             'type' => Type::Coworking->value,
             'city' => City::Paphos->value,
             'sockets' => Sockets::Many->value,
@@ -829,7 +829,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Food Park City',
+            'title' => 'Food Park City',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Many->value,
@@ -841,7 +841,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup',
+            'title' => 'Second Cup',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
@@ -853,7 +853,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup',
+            'title' => 'Second Cup',
             'type' => Type::Cafe->value,
             'city' => City::Paralimni->value,
             'sockets' => Sockets::Few->value,
@@ -865,7 +865,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup Egkomi',
+            'title' => 'Second Cup Egkomi',
             'description' => 'Lala Cafe',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
@@ -878,7 +878,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Lála Café Stasinou',
+            'title' => 'Lála Café Stasinou',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -890,7 +890,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup Lakatamia',
+            'title' => 'Second Cup Lakatamia',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -902,7 +902,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup Stadiou',
+            'title' => 'Second Cup Stadiou',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -914,7 +914,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup Latsia',
+            'title' => 'Second Cup Latsia',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -926,7 +926,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Second Cup Recanto store',
+            'title' => 'Second Cup Recanto store',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -938,7 +938,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Bean Bar Old Port',
+            'title' => 'Bean Bar Old Port',
             'description' => 'Nice place in the heart of Limassol for quick fixes or meetings',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
@@ -951,7 +951,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Airport',
+            'title' => 'Costa Coffee Airport',
             'description' => 'There are two places: inside and outside the Larnaca airport. Both are appropriate for a snack and some quick tasks',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
@@ -964,7 +964,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Nicosia Central',
+            'title' => 'Costa Coffee Nicosia Central',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -976,7 +976,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Makariou',
+            'title' => 'Costa Coffee Makariou',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -988,7 +988,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Stavrou',
+            'title' => 'Costa Coffee Stavrou',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -1000,7 +1000,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Nikolaou',
+            'title' => 'Costa Coffee Nikolaou',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -1012,7 +1012,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Odessa Hotel',
+            'title' => 'Costa Coffee Odessa Hotel',
             'type' => Type::Cafe->value,
             'city' => City::Protaras->value,
             'sockets' => Sockets::Few->value,
@@ -1024,7 +1024,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Kallipoleos',
+            'title' => 'Costa Coffee Kallipoleos',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -1036,7 +1036,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Nicosia Mall',
+            'title' => 'Costa Coffee Nicosia Mall',
             'type' => Type::Cafe->value,
             'city' => City::Nicosia->value,
             'sockets' => Sockets::Few->value,
@@ -1048,7 +1048,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Makariou',
+            'title' => 'Costa Coffee Makariou',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Few->value,
@@ -1060,7 +1060,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Germasogeia',
+            'title' => 'Costa Coffee Germasogeia',
             'type' => Type::Cafe->value,
             'city' => City::Limassol->value,
             'sockets' => Sockets::Many->value,
@@ -1072,7 +1072,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Metropolis mall',
+            'title' => 'Costa Coffee Metropolis mall',
             'type' => Type::Cafe->value,
             'city' => City::Larnaca->value,
             'sockets' => Sockets::Few->value,
@@ -1084,7 +1084,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee Kouklia',
+            'title' => 'Costa Coffee Kouklia',
             'type' => Type::Cafe->value,
             'city' => City::Paphos->value,
             'sockets' => Sockets::Few->value,
@@ -1096,7 +1096,7 @@ final class DatabaseSeeder extends Seeder
         ]);
 
         Place::create([
-            'name' => 'Costa Coffee QC48+FR5',
+            'title' => 'Costa Coffee QC48+FR5',
             'type' => Type::Cafe->value,
             'city' => City::Paphos->value,
             'sockets' => Sockets::Few->value,
