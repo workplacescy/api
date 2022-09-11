@@ -24,6 +24,7 @@ class PlaceController extends BaseModuleController
 {
     protected $moduleName = 'places';
 
+
     protected function setUpController(): void
     {
         parent::setUpController();
