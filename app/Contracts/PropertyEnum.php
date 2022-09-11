@@ -13,6 +13,10 @@ interface PropertyEnum
     public static function values(): array;
 
 
+    /** @return string[] */
+    public static function casesValues(): array;
+
+
     /** Value from 1 to 5 */
     public function coefficient(): int;
 }
