@@ -22,6 +22,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->softDeletes();
+            $table->boolean('published')->default(true);
             $table->string('title')->index();
             $table->text('description')->nullable()->index();
             //$table->text('description')->nullable()->fulltext();

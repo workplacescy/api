@@ -29,6 +29,6 @@ final class IndexController extends Controller
 {
     public function __invoke(IndexRequest $request): PlaceCollection
     {
-        return new PlaceCollection(Place::filter($request->all())->get());
+        return new PlaceCollection(Place::published()->filter($request->all())->get());
     }
 }

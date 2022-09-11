@@ -7,6 +7,9 @@ namespace App\Http\Controllers;
 use App\Http\Resources\PlaceResource;
 use App\Models\Place;
 use OpenApi\Attributes as OA;
+use Symfony\Component\HttpFoundation\Response;
+
+use function abort_unless;
 
 /** Show place */
 #[OA\Get(path: '/{place}', parameters: [
@@ -21,6 +24,8 @@ final class ShowController extends Controller
 {
     public function __invoke(Place $place): PlaceResource
     {
+        abort_unless($place->published(), Response::HTTP_NOT_FOUND);
+
         return new PlaceResource($place);
     }
 }

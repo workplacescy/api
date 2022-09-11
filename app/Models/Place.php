@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use A17\Twill\Models\Behaviors\HasMedias;
+use A17\Twill\Models\Model;
 use App\Enums\Busyness;
 use App\Enums\City;
 use App\Enums\Cuisine;
@@ -15,16 +17,14 @@ use App\Enums\View;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
 use Laravel\Scout\Searchable;
 
 final class Place extends Model
 {
     use Filterable;
     use HasFactory;
+    use HasMedias;
     use Searchable;
-    use SoftDeletes;
 
     /** @inheritdoc */
     protected $casts = [
@@ -43,6 +43,24 @@ final class Place extends Model
         'created_at',
         'updated_at',
         'deleted_at',
+    ];
+
+    protected $fillable = [
+        'title',
+        'type',
+        'city',
+        'place_id',
+        'address',
+        'latitude',
+        'longitude',
+        'url',
+        'sockets',
+        'noise',
+        'size',
+        'busyness',
+        'view',
+        'cuisine',
+        'v_rate',
     ];
 
 

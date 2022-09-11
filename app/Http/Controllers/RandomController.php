@@ -19,6 +19,6 @@ final class RandomController extends Controller
 {
     public function __invoke(): PlaceResource
     {
-        return new PlaceResource(Place::inRandomOrder()->first());
+        return new PlaceResource(Place::published()->inRandomOrder()->first());
     }
 }

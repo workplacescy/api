@@ -26,6 +26,6 @@ final class NearestController extends Controller
         $validated = $request->safe(['latitude', 'longitude']);
         [$latitude, $longitude] = [$validated['latitude'], $validated['longitude']];
 
-        return new PlaceResource(Place::orderByRaw('(latitude - ?) * (latitude - ?) + (longitude - ?) * (longitude - ?)', [$latitude, $latitude, $longitude, $longitude])->first());
+        return new PlaceResource(Place::published()->orderByRaw('(latitude - ?) * (latitude - ?) + (longitude - ?) * (longitude - ?)', [$latitude, $latitude, $longitude, $longitude])->first());
     }
 }
