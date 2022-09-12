@@ -43,6 +43,7 @@
         "area17/twill": "^3.0",
         "laravel/framework": "^9.0",
         "laravel/scout": "*",
+        "league/flysystem-aws-s3-v3": "*",
         "sentry/sentry-laravel": "*",
         "tucker-eric/eloquentfilter": "*"
     },

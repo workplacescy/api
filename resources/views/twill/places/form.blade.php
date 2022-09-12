@@ -1,6 +1,7 @@
 @extends('twill::layouts.form')
 
 @section('contentFields')
+    <x-twill::medias label="Photos" name="photos" :max="5"/>
     <x-twill::input label="Description" name="description" type="textarea"/>
     <x-twill::radios label="Type" name="type" :options="$form['types']['options']" :default="$form['types']['default']"/>
     <x-twill::radios label="City" name="city" :options="$form['cities']['options']" :default="$form['cities']['default']"/>

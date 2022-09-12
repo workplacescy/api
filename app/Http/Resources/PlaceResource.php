@@ -6,6 +6,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Support\Arr;
 use OpenApi\Attributes as OA;
 
 #[OA\Schema(required: ['id', 'title', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'cuisine', 'vRate'], properties: [
@@ -38,6 +39,8 @@ final class PlaceResource extends JsonResource
      */
     public function toArray($request): array
     {
+        $photos = Arr::map($this->imagesAsArrays('photos'), static fn(array $photo): array => Arr::except($photo, ['video']));
+
         return [
             'id' => $this->id,
             'title' => $this->title,
@@ -58,6 +61,7 @@ final class PlaceResource extends JsonResource
             'view' => $this->view,
             'cuisine' => $this->cuisine,
             'vRate' => $this->v_rate,
+            'photos' => $photos
         ];
     }
 }

@@ -29,4 +29,14 @@ return [
             ],
         ],
     ],
+    'default_crops' => [
+        'photos' => [
+            'default' => [
+                [
+                    'name' => 'default',
+                    'ratio' => 0,
+                ],
+            ],
+        ],
+    ],
 ];

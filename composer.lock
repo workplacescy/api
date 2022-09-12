@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "564a003d7b2b4d0d89b518fb941fff7a",
+    "content-hash": "523afbfe4604e07b4e36bf280a6dfe57",
     "packages": [
         {
             "name": "alexpechkarev/geometry-library",
@@ -11582,8 +11582,8 @@
         "ext-pcre": "*",
         "ext-pdo": "*",
         "ext-pdo_sqlite": "*",
-        "ext-sqlite3": "*",
-        "ext-phar": "*"
+        "ext-phar": "*",
+        "ext-sqlite3": "*"
     },
     "platform-dev": {
         "ext-intl": "*"
