@@ -39,3 +39,11 @@ grace_period = "5s"
 interval = "10s"
 restart_limit = 0
 timeout = "1s"
+
+[mounts]
+source="db"
+destination="/mnt/db"
+
+[[statics]]
+guest_path = "/var/www/html/public"
+url_prefix = "/public"
