@@ -11,9 +11,9 @@ enum Busyness: string implements PropertyEnum
 {
     use EnumValues;
 
+    case Low = 'Low';
     case Average = 'Average';
     case High = 'High';
-    case Low = 'Low';
 
     public const WEIGHT = 2;
 
@@ -28,9 +28,9 @@ enum Busyness: string implements PropertyEnum
     public function coefficient(): int
     {
         return match ($this) {
-            self::Low => 5,
-            self::Average => 3,
             self::High => 1,
+            self::Average => 3,
+            self::Low => 5,
         };
     }
 }

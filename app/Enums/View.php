@@ -11,9 +11,9 @@ enum View: string implements PropertyEnum
 {
     use EnumValues;
 
+    case Street = 'Street';
     case Garden = 'Garden';
     case Sea = 'Sea';
-    case Street = 'Street';
 
     public const WEIGHT = 1;
 

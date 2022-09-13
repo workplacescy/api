@@ -11,9 +11,9 @@ enum Noise: string implements PropertyEnum
 {
     use EnumValues;
 
+    case Quite = 'Quite';
     case Medium = 'Medium';
     case Noisy = 'Noisy';
-    case Quite = 'Quite';
 
     public const WEIGHT = 2;
 

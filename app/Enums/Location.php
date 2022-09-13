@@ -27,8 +27,8 @@ enum Location: string implements PropertyEnum
     public function coefficient(): int
     {
         return match ($this) {
-            self::Convenient => 5,
             self::Unhandy => 1,
+            self::Convenient => 5,
         };
     }
 }

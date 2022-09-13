@@ -11,9 +11,9 @@ enum Size: string implements PropertyEnum
 {
     use EnumValues;
 
+    case Small = 'Small';
     case Average = 'Average';
     case Big = 'Big';
-    case Small = 'Small';
 
     public const WEIGHT = 2;
 
