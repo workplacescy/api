@@ -11,7 +11,7 @@ COPY docker/php/ ${PHP_INI_DIR}/
 USER www-data:www-data
 WORKDIR /var/www/html
 
-COPY --chown=www-data:www-data composer.* .
+COPY --chown=www-data:www-data composer.* ./
 
 ENV COMPOSER_CACHE_DIR /dev/null
 
