@@ -47,15 +47,3 @@ destination="/mnt/db"
 [[statics]]
 guest_path = "/var/www/html/public/assets"
 url_prefix = "/assets"
-
-[[statics]]
-guest_path = "/var/www/html/public/favicon.ico"
-url_prefix = "/favicon.ico"
-
-[[statics]]
-guest_path = "/var/www/html/public/humans.txt"
-url_prefix = "/humans.txt"
-
-[[statics]]
-guest_path = "/var/www/html/public/robots.txt"
-url_prefix = "/robots.txt"
