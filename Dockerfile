@@ -5,6 +5,7 @@ LABEL fly_launch_runtime="laravel"
 RUN docker-php-ext-enable opcache
 RUN curl -sS --compressed https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+COPY docker/init.sh /
 COPY docker/php/ ${PHP_INI_DIR}/
 
 COPY --chown=www-data:www-data composer.* ./
@@ -21,10 +22,8 @@ ARG APP_ENV
 RUN set -eux ; \
     chown -R www-data:www-data vendor ; \
     chmod -R -x+X . ; \
-    composer dump-autoload --classmap-authoritative --no-interaction; \
-    php artisan optimize:clear; \
-    php artisan migrate --force --no-interaction
+    composer dump-autoload --classmap-authoritative --no-interaction
 
 EXPOSE 8080
 
-CMD ["/usr/local/bin/php", "artisan", "serve", "--host", "0.0.0.0", "--port", "8080"]
+CMD "/init.sh"
