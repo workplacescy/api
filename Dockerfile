@@ -26,4 +26,4 @@ RUN set -eux ; \
 
 EXPOSE 8080
 
-CMD "/init.sh"
+CMD ["/bin/sh", "/init.sh"]
