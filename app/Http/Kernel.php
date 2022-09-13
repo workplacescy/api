@@ -8,6 +8,7 @@ use A17\Twill\Http\Middleware\RedirectIfAuthenticated;
 use App\Http\Middleware\JsonResponse;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
 use App\Http\Middleware\TrimStrings;
+use App\Http\Middleware\TrustProxies;
 use Illuminate\Auth\Middleware\Authorize;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
@@ -27,6 +28,7 @@ final class Kernel extends HttpKernel
 {
     /** @var string[] */
     protected $middleware = [
+        TrustProxies::class,
         HandleCors::class,
         PreventRequestsDuringMaintenance::class,
         ValidatePostSize::class,
