@@ -45,7 +45,8 @@ class PlaceController extends BaseModuleController
             ->add(Text::make()->field('busyness')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->busyness->value))
             ->add(Text::make()->field('view')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->view->value))
             ->add(Text::make()->field('cuisine')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->cuisine->value))
-            ->add(Text::make()->field('v_rate')->sortable());
+            ->add(Text::make()->field('v_rate')->sortable()->customRender(static fn(TwillModelContract $model): string => (string)$model->v_rate))
+        ;
     }
 
 
