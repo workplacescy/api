@@ -21,7 +21,6 @@ ARG APP_ENV
 RUN set -eux ; \
     chown -R www-data:www-data vendor ; \
     chmod -R -x+X . ; \
-    touch /mnt/db/database.sqlite; \
     composer dump-autoload --classmap-authoritative --no-interaction; \
     php artisan optimize:clear; \
     php artisan migrate --force --no-interaction
