@@ -55,6 +55,7 @@
         "pestphp/pest": "*",
         "pestphp/pest-plugin-laravel": "*",
         "pestphp/pest-plugin-parallel": "*",
+        "php-webdriver/webdriver": "*",
         "rector/rector": "*",
         "zircote/swagger-php": "*"
     },
@@ -66,7 +67,6 @@
         "league/commonmark": "*",
         "league/glide-laravel": "*",
         "matthewbdaly/laravel-azure-storage": "*",
-        "php-webdriver/webdriver": "*",
         "pragmarx/google2fa-qrcode": "*",
         "spatie/laravel-analytics": "*",
         "symfony/mime": "*",
