@@ -9,6 +9,8 @@ use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Arr;
 use OpenApi\Attributes as OA;
 
+use function array_walk;
+
 #[OA\Schema(required: ['id', 'title', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'cuisine', 'vRate'], properties: [
     new OA\Property(property: 'id', type: 'integer'),
     new OA\Property(property: 'title', type: 'string'),
@@ -32,6 +34,33 @@ use OpenApi\Attributes as OA;
 ], type: 'object')]
 final class PlaceResource extends JsonResource
 {
+    private function removeFields(array $array, array|string|int|float $keys): array
+    {
+        return Arr::map(
+            $array, static fn(array $item): array => Arr::map(
+            $item, static fn(array $fields): array => Arr::except(
+            $fields,
+            $keys
+        )
+        )
+        );
+    }
+
+
+    private function replaceFields(array $array, array $replacements): array
+    {
+        return Arr::map(
+            $array, static function (array $item) use ($replacements): array {
+            array_walk($replacements, static function (string|int|float $value, string $key) use (&$item): void {
+                Arr::set($item, $key, $value);
+            });
+
+            return $item;
+        }
+        );
+    }
+
+
     /**
      * @inheritDoc
      * @param Request $request
@@ -39,7 +68,9 @@ final class PlaceResource extends JsonResource
      */
     public function toArray($request): array
     {
-        $photos = Arr::map($this->imagesAsArrays('photos'), static fn(array $photo): array => Arr::except($photo, ['video']));
+        $photos = $this->imagesAsArraysWithCrops('photos', ['thumb' => config('twill.imgix.thumb_params')]);
+        $photos = $this->removeFields($photos, ['video']);
+        $photos = $this->replaceFields($photos, ['thumb.width' => config('twill.imgix.thumb_params.w'), 'thumb.height' => config('twill.imgix.thumb_params.h')]);
 
         return [
             'id' => $this->id,
@@ -61,7 +92,7 @@ final class PlaceResource extends JsonResource
             'view' => $this->view,
             'cuisine' => $this->cuisine,
             'vRate' => $this->v_rate,
-            'photos' => $photos
+            'photos' => $photos,
         ];
     }
 }

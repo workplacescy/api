@@ -41,6 +41,7 @@
         "ext-sqlite3": "*",
         "alexpechkarev/google-maps": "*",
         "area17/twill": "^3.0",
+        "imgix/imgix-php": "*",
         "laravel/framework": "^9.0",
         "laravel/scout": "*",
         "sentry/sentry-laravel": "*",
@@ -62,7 +63,6 @@
     "replace": {
         "dragonmantank/cron-expression": "*",
         "egulias/email-validator": "*",
-        "imgix/imgix-php": "*",
         "laravel/socialite": "*",
         "league/commonmark": "*",
         "league/glide-laravel": "*",

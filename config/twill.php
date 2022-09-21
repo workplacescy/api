@@ -37,6 +37,27 @@ return [
                     'ratio' => 0,
                 ],
             ],
+            'thumb' => [
+                [
+                    'name' => 'thumb',
+                    'ratio' => 1,
+                ],
+            ],
         ],
     ],
+    'imgix' => [
+        'default_params' => [
+            'auto' => 'compress,enhance,format',
+            'fit' => 'min',
+            //'q' => 80,
+        ],
+        'thumb_params' => [
+            //'crop' => 'edges',
+            'crop' => 'entropy',
+            'fit' => 'crop',
+            'h' => 235,
+            'q' => 45,
+            'w' => 235,
+        ]
+    ]
 ];
