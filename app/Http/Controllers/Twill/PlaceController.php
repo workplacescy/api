@@ -117,6 +117,7 @@ class PlaceController extends BaseModuleController
                 'options' => Cuisine::valuesLabels(),
                 'default' => Cuisine::defaultValue(),
             ],
+            'reloadOnSuccess' => true
         ];
     }
 }
