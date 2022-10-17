@@ -6,6 +6,6 @@ namespace App\Http\Requests\Twill;
 
 use A17\Twill\Http\Requests\Admin\Request;
 
-class PlaceRequest extends Request
+final class PlaceRequest extends Request
 {
 }

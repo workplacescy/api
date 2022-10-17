@@ -13,7 +13,7 @@ use App\Models\Place;
 
 use function app;
 
-class PlaceRepository extends ModuleRepository
+final class PlaceRepository extends ModuleRepository
 {
     use HandleMedias;
 

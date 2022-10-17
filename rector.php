@@ -14,6 +14,7 @@ use Rector\Naming\Rector\Class_\RenamePropertyToMatchTypeRector;
 use Rector\Naming\Rector\ClassMethod\RenameParamToMatchTypeRector;
 use Rector\PHPUnit\Set\PHPUnitLevelSetList;
 use Rector\Set\ValueObject\SetList;
+use Rector\TypeDeclaration\Rector\ClassMethod\AddArrayReturnDocTypeRector;
 use Rector\TypeDeclaration\Rector\ClassMethod\ArrayShapeFromConstantArrayReturnRector;
 
 return static function (RectorConfig $rectorConfig): void {
@@ -32,6 +33,7 @@ return static function (RectorConfig $rectorConfig): void {
     ]);
 
     $rectorConfig->skip([
+        AddArrayReturnDocTypeRector::class,
         ArrayShapeFromConstantArrayReturnRector::class,
         EncapsedStringsToSprintfRector::class,
         RenameParamToMatchTypeRector::class,

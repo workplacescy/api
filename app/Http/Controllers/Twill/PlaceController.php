@@ -20,8 +20,9 @@ use App\Enums\Type;
 use App\Enums\View;
 use Illuminate\Database\Eloquent\Builder;
 
-class PlaceController extends BaseModuleController
+final class PlaceController extends BaseModuleController
 {
+    /** @inheritdoc */
     protected $moduleName = 'places';
 
 
@@ -53,28 +54,28 @@ class PlaceController extends BaseModuleController
     public function filters(): TableFilters
     {
         return TableFilters::make([
-            BasicFilter::make()->queryString('type')->options(collect(Type::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('type')->options(collect(Type::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('type', $value);
             }),
-            BasicFilter::make()->queryString('city')->options(collect(City::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('city')->options(collect(City::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('city', $value);
             }),
-            BasicFilter::make()->queryString('sockets')->options(collect(Sockets::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('sockets')->options(collect(Sockets::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('sockets', $value);
             }),
-            BasicFilter::make()->queryString('noise')->options(collect(Noise::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('noise')->options(collect(Noise::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('noise', $value);
             }),
-            BasicFilter::make()->queryString('size')->options(collect(Size::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('size')->options(collect(Size::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('size', $value);
             }),
-            BasicFilter::make()->queryString('busyness')->options(collect(Busyness::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('busyness')->options(collect(Busyness::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('busyness', $value);
             }),
-            BasicFilter::make()->queryString('view')->options(collect(View::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('view')->options(collect(View::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('view', $value);
             }),
-            BasicFilter::make()->queryString('cuisine')->options(collect(Cuisine::casesValues()))->apply(function (Builder $builder, string $value): void {
+            BasicFilter::make()->queryString('cuisine')->options(collect(Cuisine::casesValues()))->apply(static function (Builder $builder, string $value): void {
                 $builder->where('cuisine', $value);
             }),
         ]);

@@ -45,6 +45,7 @@ final class Place extends Model
         'deleted_at',
     ];
 
+    /** @inheritdoc */
     protected $fillable = [
         'title',
         'type',
