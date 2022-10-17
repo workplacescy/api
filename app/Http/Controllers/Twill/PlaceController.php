@@ -25,11 +25,15 @@ final class PlaceController extends BaseModuleController
     /** @inheritdoc */
     protected $moduleName = 'places';
 
+    /** @inheritdoc */
+    protected $formWith = ['medias.tags'];
+
 
     protected function setUpController(): void
     {
         parent::setUpController();
 
+        $this->disableIncludeScheduledInList();
         $this->disablePermalink();
         $this->enableDuplicate();
         $this->enableSkipCreateModal();

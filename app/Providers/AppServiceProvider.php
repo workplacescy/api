@@ -11,6 +11,11 @@ final class AppServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        //Model::preventLazyLoading(); // TODO Wait for Twill media library
+        //Model::preventSilentlyDiscardingAttributes(); // TODO Wait for Twill
+        //Model::preventAccessingMissingAttributes(); // TODO Wait for Twill
+        //Model::shouldBeStrict(); // TODO Wait for Twill
+
         PlaceResource::withoutWrapping();
     }
 }

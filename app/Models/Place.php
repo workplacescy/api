@@ -62,7 +62,11 @@ final class Place extends Model
         'view',
         'cuisine',
         'v_rate',
+        'published',
     ];
+
+    /** @inheritdoc */
+    protected $with = ['medias'];
 
 
     /** @inheritdoc */
