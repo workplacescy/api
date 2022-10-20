@@ -16,13 +16,11 @@ use App\Enums\Type;
 use App\Enums\View;
 use EloquentFilter\Filterable;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Laravel\Scout\Searchable;
 
 final class Place extends Model
 {
     use Filterable;
-    use HasFactory;
     use HasMedias;
     use Searchable;
 
