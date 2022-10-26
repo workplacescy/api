@@ -17,10 +17,9 @@ final class UpdateDetails
 
     public function __invoke(Place|TwillModelContract $place): void
     {
-        $place->place_id = $this->googlePlacesService->findGooglePlaceId($place);
+        $placeDetails = ($this->googlePlacesService)($place);
 
-        $placeDetails = $this->googlePlacesService->findGooglePlaceDetails($place);
-
+        $place->place_id = $placeDetails->place_id;
         $place->address = $placeDetails->address;
         $place->latitude = $placeDetails->latitude;
         $place->longitude = $placeDetails->longitude;

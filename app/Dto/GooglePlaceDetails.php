@@ -10,6 +10,7 @@ final class GooglePlaceDetails
         public readonly string $address,
         public readonly string $latitude,
         public readonly string $longitude,
+        public readonly string $place_id,
         public readonly string $url,
     ) {
     }

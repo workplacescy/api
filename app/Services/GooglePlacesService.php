@@ -9,6 +9,8 @@ use App\Models\Place;
 use GoogleMaps\GoogleMaps;
 use RuntimeException;
 
+use stdClass;
+
 use function json_decode;
 use function print_r;
 
@@ -21,25 +23,40 @@ final class GooglePlacesService
     }
 
 
-    public function findGooglePlaceId(Place $place): string
+    public function __invoke(Place $place): GooglePlaceDetails
+    {
+        $commonDetails  = $this->getCommonDetails($place);
+        $url = $this->getUrl($commonDetails->place_id);
+
+        return new GooglePlaceDetails(
+            $commonDetails->formatted_address,
+            (string)$commonDetails->geometry->location->lat,
+            (string)$commonDetails->geometry->location->lng,
+            $commonDetails->place_id,
+            $url
+        );
+    }
+
+
+    private function getCommonDetails(Place $place): stdClass
     {
         $query = "{$place->title},{$place->city->value}";
         $response = json_decode($this->googleMaps->load('textsearch')->setParam(['query' => $query])->get(), false, 512, JSON_THROW_ON_ERROR);
 
         if ($response->status !== 'OK') {
-            throw new RuntimeException('place_id not found for query '.$query.\PHP_EOL.'Response: '.print_r($response, true));
+            throw new RuntimeException('Common details not found for query '.$query.\PHP_EOL.'Response: '.print_r($response, true));
         }
 
-        return $response->results[0]->place_id;
+        return $response->results[0];
     }
 
 
-    public function findGooglePlaceDetails(Place $place): GooglePlaceDetails
+    private function getUrl(string $place_id): string
     {
         $response = json_decode(
             $this->googleMaps->load('placedetails')->setParam([
-                'placeid' => $place->place_id,
-                'fields' => 'formatted_address,geometry/location,name,url',
+                'placeid' => $place_id,
+                'fields' => 'url',
             ])->get(),
             false,
             512,
@@ -47,11 +64,9 @@ final class GooglePlacesService
         );
 
         if ($response->status !== 'OK') {
-            throw new RuntimeException('Place details not found for place_id '.$place->place_id);
+            throw new RuntimeException('Place details not found for place_id '.$place_id->place_id);
         }
 
-        return new GooglePlaceDetails(
-            $response->result->formatted_address, (string)$response->result->geometry->location->lat, (string)$response->result->geometry->location->lng, $response->result->url
-        );
+        return $response->result->url;
     }
 }
