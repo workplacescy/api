@@ -8,7 +8,6 @@ use App\Dto\GooglePlaceDetails;
 use App\Models\Place;
 use GoogleMaps\GoogleMaps;
 use RuntimeException;
-
 use stdClass;
 
 use function json_decode;
@@ -25,22 +24,22 @@ final class GooglePlacesService
 
     public function __invoke(Place $place): GooglePlaceDetails
     {
-        $commonDetails  = $this->getCommonDetails($place);
-        $url = $this->getUrl($commonDetails->place_id);
+        $commonDetails = $this->getCommonDetails($place);
+        $placeDetails = $this->getPlaceDetails($commonDetails->place_id);
 
         return new GooglePlaceDetails(
-            $commonDetails->formatted_address,
+            $placeDetails->formatted_address,
             (string)$commonDetails->geometry->location->lat,
             (string)$commonDetails->geometry->location->lng,
             $commonDetails->place_id,
-            $url
+            $placeDetails->url,
         );
     }
 
 
     private function getCommonDetails(Place $place): stdClass
     {
-        $query = "{$place->title},{$place->city->value}";
+        $query = "{$place->title},{$place->city->value},Cyprus";
         $response = json_decode($this->googleMaps->load('textsearch')->setParam(['query' => $query])->get(), false, 512, JSON_THROW_ON_ERROR);
 
         if ($response->status !== 'OK') {
@@ -51,12 +50,12 @@ final class GooglePlacesService
     }
 
 
-    private function getUrl(string $place_id): string
+    private function getPlaceDetails(string $place_id): stdClass
     {
         $response = json_decode(
             $this->googleMaps->load('placedetails')->setParam([
                 'placeid' => $place_id,
-                'fields' => 'url',
+                'fields' => 'formatted_address,url',
             ])->get(),
             false,
             512,
@@ -67,6 +66,6 @@ final class GooglePlacesService
             throw new RuntimeException('Place details not found for place_id '.$place_id->place_id);
         }
 
-        return $response->result->url;
+        return $response->result;
     }
 }
