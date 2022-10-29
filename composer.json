@@ -23,7 +23,7 @@
     "support": {
         "email": "workplacescy@gmail.com",
         "issues": "https://github.com/workplacescy/api/issues",
-        "docs": "https://@TODO"
+        "docs": "https://habr.com/ru/post/694142/"
     },
     "require": {
         "php": "^8.1",
