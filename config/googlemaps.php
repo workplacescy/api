@@ -247,7 +247,7 @@ return [
                 'location' => null,
                 'name' => null,
                 'phone_number' => null,
-                'types' => null,// according to docs types still required as string parameter
+                'types' => null, // according to docs types still required as string parameter
                 'type' => null, // types deprecated, one type may be specified
                 'website' => null,
             ],

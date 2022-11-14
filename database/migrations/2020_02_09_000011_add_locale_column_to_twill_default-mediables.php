@@ -20,7 +20,7 @@ class AddLocaleColumnToTwillDefaultMediables extends Migration
 
         if (Schema::hasTable($twillMediablesTable) && Schema::hasColumn($twillMediablesTable, 'locale')) {
             Schema::table($twillMediablesTable, function (Blueprint $table) use ($twillMediablesTable) {
-                $table->dropIndex($twillMediablesTable . '_locale_index');
+                $table->dropIndex($twillMediablesTable.'_locale_index');
                 $table->dropColumn('locale');
             });
         }

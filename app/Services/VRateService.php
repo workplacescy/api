@@ -26,7 +26,7 @@ final class VRateService
     }
 
 
-    /** @param PropertyEnum[] $attributes */
+    /** @param array<PropertyEnum> $attributes */
     private function rateSummary(array $attributes): ?float
     {
         return array_reduce($attributes, function (mixed $carry, PropertyEnum $attribute): float {
@@ -35,7 +35,7 @@ final class VRateService
     }
 
 
-    /** @param PropertyEnum[] $attributes */
+    /** @param array<PropertyEnum> $attributes */
     private function weightSummary(array $attributes): ?float
     {
         return array_reduce($attributes, static function (mixed $carry, PropertyEnum $attribute): float {
@@ -44,7 +44,7 @@ final class VRateService
     }
 
 
-    /** @param PropertyEnum[] $attributes */
+    /** @param array<PropertyEnum> $attributes */
     private function rateTotal(array $attributes): float|int
     {
         return $this->rateSummary($attributes) / $this->weightSummary($attributes);

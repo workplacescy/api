@@ -26,7 +26,7 @@ use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 final class Kernel extends HttpKernel
 {
-    /** @var string[] */
+    /** @var array<string> */
     protected $middleware = [
         TrustProxies::class,
         HandleCors::class,
@@ -36,7 +36,7 @@ final class Kernel extends HttpKernel
         ConvertEmptyStringsToNull::class,
     ];
 
-    /** @var string[][] */
+    /** @var array<array<string>> */
     protected $middlewareGroups = [
         'api' => [
             //'throttle:api',
@@ -53,7 +53,7 @@ final class Kernel extends HttpKernel
         ],
     ];
 
-    /** @var string[] */
+    /** @var array<string> */
     protected $routeMiddleware = [
         'bindings' => SubstituteBindings::class,
         'cache.headers' => SetCacheHeaders::class,

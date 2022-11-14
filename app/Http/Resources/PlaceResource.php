@@ -37,12 +37,14 @@ final class PlaceResource extends JsonResource
     private function removeFields(array $array, array|string|int|float $keys): array
     {
         return Arr::map(
-            $array, static fn(array $item): array => Arr::map(
-            $item, static fn(array $fields): array => Arr::except(
-            $fields,
-            $keys
-        )
-        )
+            $array,
+            static fn (array $item): array => Arr::map(
+                $item,
+                static fn (array $fields): array => Arr::except(
+                    $fields,
+                    $keys
+                )
+            )
         );
     }
 
@@ -50,13 +52,14 @@ final class PlaceResource extends JsonResource
     private function replaceFields(array $array, array $replacements): array
     {
         return Arr::map(
-            $array, static function (array $item) use ($replacements): array {
-            array_walk($replacements, static function (string|int|float $value, string $key) use (&$item): void {
-                Arr::set($item, $key, $value);
-            });
+            $array,
+            static function (array $item) use ($replacements): array {
+                array_walk($replacements, static function (string|int|float $value, string $key) use (&$item): void {
+                    Arr::set($item, $key, $value);
+                });
 
-            return $item;
-        }
+                return $item;
+            }
         );
     }
 
@@ -64,7 +67,7 @@ final class PlaceResource extends JsonResource
     /**
      * @inheritDoc
      * @param Request $request
-     * @return array{id: int, type: string, properties: array{title: string, description: string, placeId: string}, geometry: array{type: string, coordinates: float[]}}
+     * @return array{id: int, type: string, properties: array{title: string, description: string, placeId: string}, geometry: array{type: string, coordinates: array{float}}}
      */
     public function toArray($request): array
     {
@@ -81,8 +84,8 @@ final class PlaceResource extends JsonResource
             'placeId' => $this->place_id,
             'address' => $this->address,
             'position' => [
-                'lat' => (float)$this->latitude,
-                'lng' => (float)$this->longitude,
+                'lat' => (float) $this->latitude,
+                'lng' => (float) $this->longitude,
             ],
             'url' => $this->url,
             'sockets' => $this->sockets,

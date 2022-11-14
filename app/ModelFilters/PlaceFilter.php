@@ -10,7 +10,7 @@ final class PlaceFilter extends ModelFilter
 {
     /**
      * @inheritdoc
-     * @var string[]
+     * @var array<string>
      */
     protected $blacklist = [
         'id',

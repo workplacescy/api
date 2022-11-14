@@ -29,8 +29,8 @@ final class GooglePlacesService
 
         return new GooglePlaceDetails(
             $placeDetails->formatted_address,
-            (string)$commonDetails->geometry->location->lat,
-            (string)$commonDetails->geometry->location->lng,
+            (string) $commonDetails->geometry->location->lat,
+            (string) $commonDetails->geometry->location->lng,
             $commonDetails->place_id,
             $placeDetails->url,
         );

@@ -40,18 +40,18 @@ final class PlaceController extends BaseModuleController
     }
 
 
-    protected function getIndexTableColumns(): TableColumns {
+    protected function getIndexTableColumns(): TableColumns
+    {
         return parent::getIndexTableColumns()
-            ->add(Text::make()->field('type')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->type->value))
-            ->add(Text::make()->field('city')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->city->value))
-            ->add(Text::make()->field('sockets')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->sockets->value))
-            ->add(Text::make()->field('noise')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->noise->value))
-            ->add(Text::make()->field('size')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->size->value))
-            ->add(Text::make()->field('busyness')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->busyness->value))
-            ->add(Text::make()->field('view')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->view->value))
-            ->add(Text::make()->field('cuisine')->sortable()->customRender(static fn(TwillModelContract $model): string => $model->cuisine->value))
-            ->add(Text::make()->field('v_rate')->sortable()->customRender(static fn(TwillModelContract $model): string => (string)$model->v_rate))
-        ;
+            ->add(Text::make()->field('type')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->type->value))
+            ->add(Text::make()->field('city')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->city->value))
+            ->add(Text::make()->field('sockets')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->sockets->value))
+            ->add(Text::make()->field('noise')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->noise->value))
+            ->add(Text::make()->field('size')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->size->value))
+            ->add(Text::make()->field('busyness')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->busyness->value))
+            ->add(Text::make()->field('view')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->view->value))
+            ->add(Text::make()->field('cuisine')->sortable()->customRender(static fn (TwillModelContract $model): string => $model->cuisine->value))
+            ->add(Text::make()->field('v_rate')->sortable()->customRender(static fn (TwillModelContract $model): string => (string) $model->v_rate));
     }
 
 
@@ -122,7 +122,7 @@ final class PlaceController extends BaseModuleController
                 'options' => Cuisine::valuesLabels(),
                 'default' => Cuisine::defaultValue(),
             ],
-            'reloadOnSuccess' => true
+            'reloadOnSuccess' => true,
         ];
     }
 }

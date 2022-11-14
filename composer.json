@@ -52,7 +52,9 @@
         "brianium/paratest": "*",
         "hotmeteor/spectator": "*",
         "laravel/dusk": "*",
+        "laravel/pint": "*",
         "mockery/mockery": "*",
+        "nunomaduro/phpinsights": "*",
         "pestphp/pest": "*",
         "pestphp/pest-plugin-laravel": "*",
         "pestphp/pest-plugin-parallel": "*",
@@ -98,6 +100,7 @@
     "prefer-stable": true,
     "config": {
         "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
             "pestphp/pest-plugin": true
         },
         "apcu-autoloader": true,

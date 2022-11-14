@@ -15,23 +15,23 @@ trait EnumValues
     }
 
 
-    /** @return string[] */
+    /** @return array<string> */
     public static function values(): array
     {
-        return array_map(static fn(self $case): string => $case->value, self::cases());
+        return array_map(static fn (self $case): string => $case->value, self::cases());
     }
 
 
-    /** @return string[] */
+    /** @return array<string> */
     public static function casesValues(): array
     {
-        return array_reduce(self::cases(), static fn(mixed $carry, self $case): array => $carry + [$case->value => $case->value], []);
+        return array_reduce(self::cases(), static fn (mixed $carry, self $case): array => $carry + [$case->value => $case->value], []);
     }
 
 
-    /** @return string[] */
+    /** @return array<string> */
     public static function valuesLabels(): array
     {
-        return array_map(static fn(self $case): array => ['label' => $case->value, 'value' => $case->value], self::cases());
+        return array_map(static fn (self $case): array => ['label' => $case->value, 'value' => $case->value], self::cases());
     }
 }

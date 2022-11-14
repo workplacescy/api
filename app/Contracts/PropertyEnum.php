@@ -9,11 +9,11 @@ interface PropertyEnum
     public static function default(): self;
 
 
-    /** @return string[] */
+    /** @return array<string> */
     public static function values(): array;
 
 
-    /** @return string[] */
+    /** @return array<string> */
     public static function casesValues(): array;
 
 
