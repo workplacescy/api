@@ -61,6 +61,8 @@ final class Place extends Model
         'cuisine',
         'v_rate',
         'published',
+        'wifi_name',
+        'wifi_password',
     ];
 
     /** @inheritdoc */

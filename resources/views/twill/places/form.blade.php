@@ -11,6 +11,8 @@
     <x-twill::radios label="Busyness" name="busyness" :options="$form['busynesses']['options']" :default="$form['busynesses']['default']"/>
     <x-twill::radios label="View" name="view" :options="$form['views']['options']" :default="$form['views']['default']"/>
     <x-twill::radios label="Cuisine" name="cuisine" :options="$form['cuisines']['options']" :default="$form['cuisines']['default']"/>
+    <x-twill::input label="Wi-Fi name" name="wifi_name"/>
+    <x-twill::input label="Wi-Fi password" name="wifi_password"/>
 @stop
 
 @section('sideFieldset')

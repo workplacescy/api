@@ -11,7 +11,7 @@ use OpenApi\Attributes as OA;
 
 use function array_walk;
 
-#[OA\Schema(required: ['id', 'title', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'cuisine', 'vRate'], properties: [
+#[OA\Schema(required: ['id', 'title', 'description', 'type', 'city', 'placeId', 'address', 'position', 'url', 'sockets', 'noise', 'size', 'busyness', 'view', 'cuisine', 'vRate', 'wifi'], properties: [
     new OA\Property(property: 'id', type: 'integer'),
     new OA\Property(property: 'title', type: 'string'),
     new OA\Property(property: 'description', type: 'string', nullable: true),
@@ -31,6 +31,10 @@ use function array_walk;
     new OA\Property(property: 'view', type: 'string'),
     new OA\Property(property: 'cuisine', type: 'string'),
     new OA\Property(property: 'vRate', type: 'float', nullable: true),
+    new OA\Property(property: 'wifi', required: ['name', 'password'], properties: [
+        new OA\Property(property: 'name', type: 'string', nullable: true),
+        new OA\Property(property: 'password', type: 'string', nullable: true),
+    ], type: 'object'),
 ], type: 'object')]
 final class PlaceResource extends JsonResource
 {
@@ -95,6 +99,10 @@ final class PlaceResource extends JsonResource
             'view' => $this->view,
             'cuisine' => $this->cuisine,
             'vRate' => $this->v_rate,
+            'wifi' => [
+                'name' => $this->wifi_name,
+                'password' => $this->wifi_password,
+            ],
             'photos' => $photos,
         ];
     }

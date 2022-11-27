@@ -120,6 +120,7 @@ components:
         - view
         - cuisine
         - vRate
+        - wifi
       properties:
         id:
           type: integer
@@ -178,6 +179,20 @@ components:
             - number
             - 'null'
           format: float
+        wifi:
+          required:
+            - name
+            - password
+          properties:
+            name:
+              type:
+                - string
+                - 'null'
+            password:
+              type:
+                - string
+                - 'null'
+          type: object
       type: object
   responses:
     PlaceCollectionResponse:
