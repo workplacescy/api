@@ -23,7 +23,7 @@
     "support": {
         "email": "workplacescy@gmail.com",
         "issues": "https://github.com/workplacescy/api/issues",
-        "docs": "https://habr.com/ru/post/694142/"
+        "docs": "https://dev.to/vladimir_mvs/workplaces-for-digital-nomads-the-api-5hk8"
     },
     "require": {
         "php": "^8.1",
