@@ -24,7 +24,7 @@ final class ShowController extends Controller
 {
     public function __invoke(Place $place): PlaceResource
     {
-        abort_unless($place->published(), Response::HTTP_NOT_FOUND);
+        abort_unless($place->published, Response::HTTP_NOT_FOUND);
 
         return new PlaceResource($place);
     }
