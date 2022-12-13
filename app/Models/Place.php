@@ -26,42 +26,42 @@ final class Place extends Model
 
     /** @inheritdoc */
     protected $casts = [
-        'type' => Type::class,
+        'busyness' => Busyness::class,
         'city' => City::class,
-        'sockets' => Sockets::class,
+        'cuisine' => Cuisine::class,
         'noise' => Noise::class,
         'size' => Size::class,
-        'busyness' => Busyness::class,
+        'sockets' => Sockets::class,
+        'type' => Type::class,
         'view' => View::class,
-        'cuisine' => Cuisine::class,
     ];
 
     /** @inheritdoc */
     protected $hidden = [
         'created_at',
-        'updated_at',
         'deleted_at',
+        'updated_at',
     ];
 
     /** @inheritdoc */
     protected $fillable = [
-        'description',
-        'title',
-        'type',
-        'city',
-        'place_id',
         'address',
+        'busyness',
+        'city',
+        'cuisine',
+        'description',
         'latitude',
         'longitude',
-        'url',
-        'sockets',
         'noise',
-        'size',
-        'busyness',
-        'view',
-        'cuisine',
-        'v_rate',
+        'place_id',
         'published',
+        'size',
+        'sockets',
+        'title',
+        'type',
+        'url',
+        'v_rate',
+        'view',
         'wifi_name',
         'wifi_password',
     ];
@@ -85,10 +85,10 @@ final class Place extends Model
     public function toSearchableArray(): array
     {
         return [
+            'address' => $this->address,
+            'description' => $this->description,
             'id' => $this->id,
             'title' => $this->title,
-            'description' => $this->description,
-            'address' => $this->address,
         ];
     }
 }
