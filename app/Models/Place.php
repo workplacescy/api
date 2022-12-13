@@ -45,6 +45,7 @@ final class Place extends Model
 
     /** @inheritdoc */
     protected $fillable = [
+        'description',
         'title',
         'type',
         'city',
